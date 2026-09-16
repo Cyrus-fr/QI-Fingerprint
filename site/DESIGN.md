@@ -434,4 +434,8 @@ reading arriving.
 - Section order may still be re-cut; nothing may be lost. The order shipped in `RunPage`
   (collar, seam, method, triage, cohort, cascade, assay, assays, lost core, prior surveys,
   title block) is the current build, not a pinned rule.
-- No deploy target has been chosen; the site is served locally from `site/out`.
+- Deploy target is settled: GitHub Pages at https://cyrus-fr.github.io/QI-Fingerprint/,
+  built in CI by `.github/workflows/pages.yml`. The export is not committed. Because a
+  project page serves from `/<repo>` rather than the domain root, `next.config.mjs`
+  reads `PAGES_BASE_PATH`, which CI sets from the repository name; local builds and
+  `next dev` leave it empty and stay at the root.
