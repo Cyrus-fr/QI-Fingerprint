@@ -1,0 +1,32 @@
+{
+  "defaultSeed": 7,
+  "runs": [
+    {
+      "seed": 7,
+      "curve": "secp256k1",
+      "file": "run-7.json",
+      "nKeys": 70,
+      "nSignatures": 409,
+      "nCracked": 6,
+      "nAttributed": 14
+    },
+    {
+      "seed": 11,
+      "curve": "secp256k1",
+      "file": "run-11.json",
+      "nKeys": 70,
+      "nSignatures": 425,
+      "nCracked": 6,
+      "nAttributed": 14
+    },
+    {
+      "seed": 23,
+      "curve": "secp256k1",
+      "file": "run-23.json",
+      "nKeys": 70,
+      "nSignatures": 432,
+      "nCracked": 6,
+      "nAttributed": 14
+    }
+  ]
+}

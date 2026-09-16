@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-13T00:00:00Z",
+  "title": "Design System: QI-Fingerprint — The Core Log",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Wet Slate",
+        "canonical": "#232a27",
+        "tonalRamp": [
+          "oklch(15% 0.012 155)",
+          "oklch(24% 0.012 155)",
+          "oklch(33% 0.012 155)",
+          "oklch(45% 0.012 155)",
+          "oklch(57% 0.012 155)",
+          "oklch(70% 0.012 155)",
+          "oklch(83% 0.012 155)",
+          "oklch(95% 0.012 155)"
+        ]
+      },
+      "ground-raised": {
+        "role": "neutral",
+        "displayName": "Raised Tray",
+        "canonical": "#2c3430",
+        "tonalRamp": [
+          "oklch(15% 0.013 155)",
+          "oklch(24% 0.013 155)",
+          "oklch(33% 0.013 155)",
+          "oklch(45% 0.013 155)",
+          "oklch(57% 0.013 155)",
+          "oklch(70% 0.013 155)",
+          "oklch(83% 0.013 155)",
+          "oklch(95% 0.013 155)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Tray Rule",
+        "canonical": "#3a443f",
+        "tonalRamp": [
+          "oklch(15% 0.014 158)",
+          "oklch(24% 0.014 158)",
+          "oklch(33% 0.014 158)",
+          "oklch(45% 0.014 158)",
+          "oklch(57% 0.014 158)",
+          "oklch(70% 0.014 158)",
+          "oklch(83% 0.014 158)",
+          "oklch(95% 0.014 158)"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Tray Rule Strong",
+        "canonical": "#4d5a54",
+        "tonalRamp": [
+          "oklch(15% 0.016 160)",
+          "oklch(24% 0.016 160)",
+          "oklch(33% 0.016 160)",
+          "oklch(45% 0.016 160)",
+          "oklch(57% 0.016 160)",
+          "oklch(70% 0.016 160)",
+          "oklch(83% 0.016 160)",
+          "oklch(95% 0.016 160)"
+        ]
+      },
+      "stock": {
+        "role": "neutral",
+        "displayName": "Log Stock",
+        "canonical": "#dfe4d9",
+        "tonalRamp": [
+          "oklch(15% 0.012 130)",
+          "oklch(26% 0.012 130)",
+          "oklch(38% 0.012 130)",
+          "oklch(50% 0.012 130)",
+          "oklch(62% 0.012 130)",
+          "oklch(75% 0.012 130)",
+          "oklch(89% 0.012 130)",
+          "oklch(96% 0.012 130)"
+        ]
+      },
+      "stock-rule": {
+        "role": "neutral",
+        "displayName": "Stock Rule",
+        "canonical": "#b9c2b3",
+        "tonalRamp": [
+          "oklch(15% 0.016 132)",
+          "oklch(26% 0.016 132)",
+          "oklch(38% 0.016 132)",
+          "oklch(50% 0.016 132)",
+          "oklch(62% 0.016 132)",
+          "oklch(78% 0.016 132)",
+          "oklch(89% 0.016 132)",
+          "oklch(96% 0.016 132)"
+        ]
+      },
+      "stock-ink": {
+        "role": "neutral",
+        "displayName": "Stock Ink",
+        "canonical": "#171c19",
+        "tonalRamp": [
+          "oklch(14% 0.010 155)",
+          "oklch(24% 0.010 155)",
+          "oklch(34% 0.010 155)",
+          "oklch(46% 0.010 155)",
+          "oklch(58% 0.010 155)",
+          "oklch(71% 0.010 155)",
+          "oklch(84% 0.010 155)",
+          "oklch(95% 0.010 155)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Core Ink",
+        "canonical": "#e9ede5",
+        "tonalRamp": [
+          "oklch(15% 0.010 130)",
+          "oklch(26% 0.010 130)",
+          "oklch(38% 0.010 130)",
+          "oklch(50% 0.010 130)",
+          "oklch(63% 0.010 130)",
+          "oklch(76% 0.010 130)",
+          "oklch(88% 0.010 130)",
+          "oklch(96% 0.010 130)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Prose Ink",
+        "canonical": "#a4ae9f",
+        "tonalRamp": [
+          "oklch(15% 0.014 135)",
+          "oklch(26% 0.014 135)",
+          "oklch(38% 0.014 135)",
+          "oklch(50% 0.014 135)",
+          "oklch(63% 0.014 135)",
+          "oklch(72% 0.014 135)",
+          "oklch(86% 0.014 135)",
+          "oklch(95% 0.014 135)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Dry Rock",
+        "canonical": "#8a9384",
+        "tonalRamp": [
+          "oklch(15% 0.016 135)",
+          "oklch(26% 0.016 135)",
+          "oklch(38% 0.016 135)",
+          "oklch(50% 0.016 135)",
+          "oklch(62% 0.016 135)",
+          "oklch(74% 0.016 135)",
+          "oklch(86% 0.016 135)",
+          "oklch(95% 0.016 135)"
+        ]
+      },
+      "field": {
+        "role": "primary",
+        "displayName": "Field Ink",
+        "canonical": "#6aa9d6",
+        "tonalRamp": [
+          "oklch(20% 0.070 245)",
+          "oklch(31% 0.080 245)",
+          "oklch(42% 0.090 245)",
+          "oklch(53% 0.095 245)",
+          "oklch(68% 0.087 245)",
+          "oklch(78% 0.070 245)",
+          "oklch(88% 0.045 245)",
+          "oklch(96% 0.020 245)"
+        ]
+      },
+      "field-deep": {
+        "role": "primary",
+        "displayName": "Field Ink Deep",
+        "canonical": "#1d5c8a",
+        "tonalRamp": [
+          "oklch(18% 0.060 245)",
+          "oklch(28% 0.075 245)",
+          "oklch(42% 0.090 245)",
+          "oklch(54% 0.095 245)",
+          "oklch(66% 0.085 245)",
+          "oklch(78% 0.065 245)",
+          "oklch(88% 0.042 245)",
+          "oklch(96% 0.018 245)"
+        ]
+      },
+      "assay": {
+        "role": "secondary",
+        "displayName": "Assay",
+        "canonical": "#d2542f",
+        "tonalRamp": [
+          "oklch(20% 0.075 40)",
+          "oklch(31% 0.105 40)",
+          "oklch(42% 0.135 40)",
+          "oklch(53% 0.160 40)",
+          "oklch(60% 0.170 40)",
+          "oklch(72% 0.140 40)",
+          "oklch(85% 0.085 40)",
+          "oklch(95% 0.030 40)"
+        ]
+      },
+      "truncated-msb": {
+        "role": "tertiary",
+        "displayName": "Truncated MSB",
+        "canonical": "#5b9dd9",
+        "tonalRamp": [
+          "oklch(20% 0.060 250)",
+          "oklch(31% 0.080 250)",
+          "oklch(42% 0.100 250)",
+          "oklch(53% 0.110 250)",
+          "oklch(65% 0.105 250)",
+          "oklch(77% 0.080 250)",
+          "oklch(88% 0.050 250)",
+          "oklch(96% 0.020 250)"
+        ]
+      },
+      "modular-reduction": {
+        "role": "tertiary",
+        "displayName": "Modular Reduction",
+        "canonical": "#57a87a",
+        "tonalRamp": [
+          "oklch(20% 0.045 155)",
+          "oklch(31% 0.060 155)",
+          "oklch(42% 0.075 155)",
+          "oklch(53% 0.085 155)",
+          "oklch(65% 0.085 155)",
+          "oklch(77% 0.065 155)",
+          "oklch(88% 0.040 155)",
+          "oklch(96% 0.018 155)"
+        ]
+      },
+      "short-period-prng": {
+        "role": "tertiary",
+        "displayName": "Short-Period PRNG",
+        "canonical": "#c2557f",
+        "tonalRamp": [
+          "oklch(20% 0.070 355)",
+          "oklch(31% 0.095 355)",
+          "oklch(42% 0.115 355)",
+          "oklch(53% 0.130 355)",
+          "oklch(58% 0.130 355)",
+          "oklch(72% 0.105 355)",
+          "oklch(86% 0.060 355)",
+          "oklch(96% 0.025 355)"
+        ]
+      },
+      "weak-seed": {
+        "role": "tertiary",
+        "displayName": "Weak Seed",
+        "canonical": "#cf9440",
+        "tonalRamp": [
+          "oklch(20% 0.050 70)",
+          "oklch(31% 0.070 70)",
+          "oklch(42% 0.090 70)",
+          "oklch(53% 0.105 70)",
+          "oklch(70% 0.110 70)",
+          "oklch(80% 0.090 70)",
+          "oklch(89% 0.055 70)",
+          "oklch(96% 0.022 70)"
+        ]
+      },
+      "clean": {
+        "role": "tertiary",
+        "displayName": "Clean Host Rock",
+        "canonical": "#7d857a",
+        "tonalRamp": [
+          "oklch(15% 0.012 140)",
+          "oklch(26% 0.012 140)",
+          "oklch(38% 0.012 140)",
+          "oklch(50% 0.012 140)",
+          "oklch(58% 0.012 140)",
+          "oklch(72% 0.012 140)",
+          "oklch(85% 0.012 140)",
+          "oklch(95% 0.012 140)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The assay heading only — the one full-viewport beat."
+      },
+      "headline": {
+        "displayName": "Interval Heading",
+        "purpose": "Interval headings against the tray, columns 1-6 of the 12-column header."
+      },
+      "title": {
+        "displayName": "Row Title",
+        "purpose": "Row, lane and assay headings inside an interval."
+      },
+      "body": {
+        "displayName": "Prose",
+        "purpose": "Running prose and standfirsts, capped at 52-74ch."
+      },
+      "reading": {
+        "displayName": "Reading",
+        "purpose": "Every measured value and every repro command. Tabular figures; never prose."
+      },
+      "label": {
+        "displayName": "Field Label",
+        "purpose": "Column heads, title-block field names, rail tick labels, SVG captions."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-descent",
+        "value": "cubic-bezier(0.16, 0.84, 0.28, 1)",
+        "purpose": "The only easing in the system; every arriving reading uses it."
+      },
+      {
+        "name": "duration-lamina",
+        "value": "520ms",
+        "purpose": "A tray lamina scaling from the collar edge, staggered 9ms per bar; recovered-key ticks ride the same clock at delay + 200ms. Played by the collar's mount effect, which resets --in to 0 with transition-property suppressed so the per-bar delay survives."
+      },
+      {
+        "name": "duration-reading",
+        "value": "760ms",
+        "purpose": "A reading wiping in from its leading edge (.reading-settle mask + opacity)."
+      },
+      {
+        "name": "duration-cascade",
+        "value": "620ms",
+        "purpose": "Cascade and derivation elements resolving in read order."
+      },
+      {
+        "name": "duration-track",
+        "value": "900ms",
+        "purpose": "A track drawing itself along its own length (stroke-dashoffset)."
+      },
+      {
+        "name": "duration-assay",
+        "value": "1150ms",
+        "purpose": "The single assay mark striking in once; it does not loop."
+      },
+      {
+        "name": "duration-row-hover",
+        "value": "140ms linear",
+        "purpose": "Logged-row hover tint."
+      },
+      {
+        "name": "scroll-weight",
+        "value": "Lenis duration 1.1, easing 1.001 - 2^(-10t), smoothWheel, syncTouch off",
+        "purpose": "Gives the scroll the weight of a drill string; touch keeps native physics."
+      },
+      {
+        "name": "in-clock",
+        "value": "@property --in { syntax: '<number>'; inherits: false; initial-value: 1 }",
+        "purpose": "The single motion clock. Initial value 1 means the server-rendered page is already resolved; only the descent controller and the collar tray effect ever set it to 0, and only after JS confirms motion is wanted."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "767px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Interval Header",
+      "kind": "custom",
+      "refersTo": "interval",
+      "description": "A logged interval's heading and standfirst on the tray. No kicker, no section number.",
+      "html": "<section class=\"ds-interval\"><header class=\"ds-interval-head\"><h2 class=\"ds-interval-title\">The population is the unit</h2><p class=\"ds-interval-standfirst\">One diagnosis per cohort, spread across the keys that were never cracked.</p></header></section>",
+      "css": ".ds-interval { background: var(--color-ground, #232a27); color: var(--color-ink, #e9ede5); border-top: 1px solid var(--color-rule, #3a443f); padding: 5rem 1.5rem; } .ds-interval-head { display: grid; gap: 1.25rem 3rem; grid-template-columns: repeat(12, 1fr); align-items: start; } .ds-interval-title { grid-column: span 6; margin: 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: clamp(1.85rem, 3.4vw, 3rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; text-wrap: balance; } .ds-interval-standfirst { grid-column: 8 / span 5; margin: 0; max-width: 62ch; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.98rem; line-height: 1.72; color: var(--color-ink-2, #a4ae9f); }"
+    },
+    {
+      "name": "Core Tray Lamina",
+      "kind": "custom",
+      "refersTo": "interval",
+      "description": "One key of the corpus: width is signature count, hatch is the assigned class, stroke is its hue. Unattributed keys are drawn as blank host rock, never omitted. The tray cuts in bar by bar on a 9ms-per-bar stagger; the recovered-key tick follows at delay + 200ms. Markup ships resolved (--in: 1); only the collar's mount effect drops it to 0, and only when motion is wanted.",
+      "html": "<svg class=\"ds-tray\" viewBox=\"0 0 220 60\" role=\"img\" aria-label=\"Cored section: bar width is signature count, hatch is the assigned class.\"><defs><pattern id=\"ds-h-seed\" width=\"8\" height=\"6\" patternUnits=\"userSpaceOnUse\"><path d=\"M0 3 L4 3\" stroke=\"#cf9440\" stroke-width=\"1.4\" fill=\"none\"/></pattern></defs><line x1=\"14\" y1=\"0\" x2=\"14\" y2=\"60\" stroke=\"var(--color-rule-strong, #4d5a54)\" stroke-width=\"1\" stroke-dasharray=\"2 4\"/><rect class=\"ds-lamina\" x=\"0\" y=\"6\" width=\"150\" height=\"11\" fill=\"url(#ds-h-seed)\" stroke=\"#cf9440\" stroke-width=\"1\" style=\"transition-delay:0ms\"/><rect class=\"ds-lamina\" x=\"155\" y=\"7\" width=\"4\" height=\"9\" fill=\"var(--color-field, #6aa9d6)\" style=\"transition-delay:200ms\"/><rect class=\"ds-lamina\" x=\"0\" y=\"22\" width=\"48\" height=\"11\" fill=\"var(--color-ground-raised, #2c3430)\" stroke=\"var(--color-rule-strong, #4d5a54)\" stroke-width=\"1\" style=\"transition-delay:9ms\"/><rect class=\"ds-lamina\" x=\"0\" y=\"38\" width=\"96\" height=\"11\" fill=\"url(#ds-h-seed)\" stroke=\"#cf9440\" stroke-width=\"1\" style=\"transition-delay:18ms\"/></svg>",
+      "css": ".ds-tray { display: block; width: 100%; max-width: 34rem; background: transparent; touch-action: auto; } @media (min-width: 768px) { .ds-tray { touch-action: none; } } .ds-lamina { transform-origin: left center; transform: scaleX(1); transition: transform 520ms cubic-bezier(0.16, 0.84, 0.28, 1); } .ds-tray:hover .ds-lamina { opacity: 1; } .ds-tray:focus-visible { outline: 2px solid var(--color-field, #6aa9d6); outline-offset: 3px; } @media (prefers-reduced-motion: reduce) { .ds-lamina { transform: none; transition-duration: 0.001ms; } }"
+    },
+    {
+      "name": "Log Sheet",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "Pale stock with real ruling: the ground every logged result sits on. No radius, no shadow.",
+      "html": "<div class=\"ds-sheet ds-ruled\"><h3 class=\"ds-sheet-title\">What the triage returned</h3><p class=\"ds-sheet-body\">Readings are logged on stock; prose stays on the tray.</p></div>",
+      "css": ".ds-sheet { background: var(--color-stock, #dfe4d9); color: var(--color-stock-ink, #171c19); border-radius: 0; padding: 1.75rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-ruled { background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, var(--color-stock-rule, #b9c2b3) 27px, var(--color-stock-rule, #b9c2b3) 28px); } .ds-sheet-title { margin: 0 0 0.75rem; font-size: 0.95rem; font-weight: 600; line-height: 1.3; } .ds-sheet-body { margin: 0; font-size: 0.86rem; line-height: 1.75; color: color-mix(in oklab, var(--color-stock-ink, #171c19) 80%, transparent); } .ds-sheet ::selection { background: var(--color-field-deep, #1d5c8a); color: var(--color-stock, #dfe4d9); }"
+    },
+    {
+      "name": "Logged Row",
+      "kind": "custom",
+      "refersTo": "logged-row",
+      "description": "One ruled row of the log. Hover raises a field-ink tint inside the row; the row never floats.",
+      "html": "<ul class=\"ds-log\"><li class=\"ds-logged-row\"><h3 class=\"ds-logged-title\">Screen</h3><span class=\"ds-reading\">719,121 signatures · 1,026 blocks</span></li><li class=\"ds-logged-row\"><h3 class=\"ds-logged-title\">Crack</h3><span class=\"ds-reading\">6 keys · d·G == Q</span></li></ul>",
+      "css": ".ds-log { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-rule, #3a443f); } .ds-logged-row { display: grid; grid-template-columns: 10rem 1fr; gap: 0.75rem 2.5rem; align-items: baseline; padding: 1.75rem 0.5rem; border-bottom: 1px solid var(--color-rule, #3a443f); transition: background-color 140ms linear; } .ds-logged-row:hover { background-color: color-mix(in oklab, var(--color-field, #6aa9d6) 9%, transparent); } .ds-logged-title { margin: 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: -0.02em; color: var(--color-ink, #e9ede5); } .ds-reading { font-family: 'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; font-feature-settings: 'tnum' 1, 'zero' 1; letter-spacing: -0.01em; font-size: 0.78rem; color: var(--color-ink-2, #a4ae9f); }"
+    },
+    {
+      "name": "Repro Command",
+      "kind": "input",
+      "refersTo": "repro",
+      "description": "The line you run. Attached to every claim, selectable whole, wrapping rather than truncating.",
+      "html": "<div class=\"ds-repro\"><pre class=\"ds-repro-cmd\"><code>qi hunt --start 252000 --blocks 1026 --strict</code></pre><p class=\"ds-repro-note\">Reproduces the mainnet control at block 252,474.</p></div>",
+      "css": ".ds-repro { border-top: 1px solid var(--color-rule, #3a443f); padding-top: 1rem; margin-top: 1.75rem; } .ds-repro-cmd { margin: 0; font-family: 'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; line-height: 1.6; color: var(--color-field, #6aa9d6); white-space: pre-wrap; overflow-wrap: anywhere; user-select: all; } .ds-repro-cmd:focus-visible { outline: 2px solid var(--color-field, #6aa9d6); outline-offset: 3px; border-radius: 0; } .ds-repro-note { margin: 0.5rem 0 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; line-height: 1.4; color: var(--color-ink-3, #8a9384); }"
+    },
+    {
+      "name": "Lithology Chip",
+      "kind": "chip",
+      "refersTo": "interval",
+      "description": "Class identity as hatch plus hue, at reading size, travelling with the label into text and cells.",
+      "html": "<span class=\"ds-lith\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" aria-hidden=\"true\"><defs><pattern id=\"ds-h-period\" width=\"6\" height=\"6\" patternUnits=\"userSpaceOnUse\"><circle cx=\"1.6\" cy=\"1.6\" r=\"1.25\" fill=\"#c2557f\"/></pattern></defs><rect width=\"14\" height=\"14\" fill=\"url(#ds-h-period)\" stroke=\"#c2557f\" stroke-width=\"1\"/></svg><span class=\"ds-lith-label\">short_period_prng</span></span>",
+      "css": ".ds-lith { display: inline-flex; align-items: baseline; gap: 0.5rem; } .ds-lith svg { align-self: center; flex: 0 0 auto; } .ds-lith-label { font-family: 'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.74rem; letter-spacing: -0.01em; color: var(--color-ink-2, #a4ae9f); }"
+    },
+    {
+      "name": "Depth Rail",
+      "kind": "nav",
+      "refersTo": "depth-rail-tick",
+      "description": "The page's only navigation: a depth scale whose ticks are the logged intervals.",
+      "html": "<nav class=\"ds-rail\" aria-label=\"Log intervals\"><span class=\"ds-rail-scale\"></span><span class=\"ds-rail-fill\"></span><ul class=\"ds-rail-list\"><li style=\"top:18%\"><a class=\"ds-rail-tick\" href=\"#method\"><span class=\"ds-rail-mark\"></span><span class=\"ds-rail-label\">method</span></a></li><li style=\"top:46%\"><a class=\"ds-rail-tick is-on\" href=\"#assay\" aria-current=\"true\"><span class=\"ds-rail-mark\"></span><span class=\"ds-rail-label\">assay</span></a></li></ul><span class=\"ds-rail-depth\">46</span></nav>",
+      "css": ".ds-rail { position: relative; width: 8rem; height: 260px; font-family: 'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace; } .ds-rail-scale, .ds-rail-fill { position: absolute; top: 0; left: 3.25rem; width: 1px; } .ds-rail-scale { height: 100%; background: var(--color-rule, #3a443f); } .ds-rail-fill { height: 100%; transform-origin: top; transform: scaleY(0.46); background: var(--color-field, #6aa9d6); } .ds-rail-list { position: relative; height: 100%; margin: 0; padding: 0; list-style: none; } .ds-rail-list li { position: absolute; left: 0; width: 8rem; } .ds-rail-tick { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; } .ds-rail-mark { display: block; height: 1px; width: 0.5rem; margin-left: 3rem; background: var(--color-rule-strong, #4d5a54); transition: all 300ms; } .ds-rail-label { font-size: 0.62rem; white-space: nowrap; color: var(--color-ink-3, #8a9384); opacity: 0; transition: color 300ms, opacity 300ms; } .ds-rail-tick:hover .ds-rail-mark { margin-left: 2.5rem; width: 1rem; background: var(--color-ink-3, #8a9384); } .ds-rail-tick:hover .ds-rail-label { opacity: 1; } .ds-rail-tick:focus-visible { outline: 2px solid var(--color-field, #6aa9d6); outline-offset: 3px; } .ds-rail-tick.is-on .ds-rail-mark { margin-left: 2.25rem; width: 1.5rem; background: var(--color-field, #6aa9d6); } .ds-rail-tick.is-on .ds-rail-label { opacity: 1; color: var(--color-field, #6aa9d6); } .ds-rail-depth { position: absolute; bottom: 0; left: 0.75rem; font-size: 0.62rem; color: var(--color-ink-3, #8a9384); }"
+    },
+    {
+      "name": "Survey Title Block",
+      "kind": "custom",
+      "refersTo": "title-block-row",
+      "description": "The drawing's identity as a ruled block of named fields — the refusal of a row of hero metrics. The finding row is set in the display face because it is a sentence, not a reading.",
+      "html": "<dl class=\"ds-title-block\"><div class=\"ds-tb-row\"><dt class=\"ds-tb-field\">finding</dt><dd class=\"ds-tb-finding\">one recovered key diagnoses the population</dd></div><div class=\"ds-tb-row\"><dt class=\"ds-tb-field\">scanned</dt><dd class=\"ds-tb-value\">1,026 blocks · 719,121 signatures</dd></div><div class=\"ds-tb-row\"><dt class=\"ds-tb-field\">gate</dt><dd class=\"ds-tb-value\">d·G == Q on every recovery</dd></div></dl>",
+      "css": ".ds-title-block { margin: 0; max-width: 36rem; border-top: 1px solid var(--color-rule, #3a443f); } .ds-tb-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.5rem; padding: 0.625rem 0; border-bottom: 1px solid var(--color-rule, #3a443f); } .ds-tb-field { flex: 0 0 6rem; margin: 0; font-family: 'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.7rem; color: var(--color-ink-3, #8a9384); } .ds-tb-value { flex: 1 1 0; min-width: 0; margin: 0; font-family: 'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; font-size: 0.8rem; color: var(--color-ink, #e9ede5); } .ds-tb-finding { flex: 1 1 0; min-width: 0; margin: 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.3; color: var(--color-ink, #e9ede5); }"
+    },
+    {
+      "name": "Assay Mark",
+      "kind": "custom",
+      "refersTo": "assay-rule",
+      "description": "The page's only assay-coloured element: a 1px full-width rule at the head of the assay interval. It strikes in once and stays. Never reuse this colour.",
+      "html": "<div class=\"ds-assay\"><div class=\"ds-assay-mark\" aria-hidden=\"true\"></div><h2 class=\"ds-assay-title\">One real key, block 252,474</h2><dl class=\"ds-assay-fields\"><div class=\"ds-assay-row\"><dt class=\"ds-tb-field\">address</dt><dd class=\"ds-assay-value\">1BFhrfTTZP3Nw4BNy4eX4KFLsn9ZeijcMm</dd></div></dl></div>",
+      "css": ".ds-assay { padding: 2rem 0; } .ds-assay-mark { height: 1px; width: 100%; background: var(--color-assay, #d2542f); margin-bottom: 2.5rem; transform-origin: left center; animation: ds-assay-strike 1150ms cubic-bezier(0.16, 0.84, 0.28, 1) both; } @keyframes ds-assay-strike { 0% { transform: scaleX(0); opacity: 0; } 60% { transform: scaleX(1.04); opacity: 1; } 100% { transform: scaleX(1); opacity: 1; } } .ds-assay-title { margin: 0 0 1.75rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: clamp(2rem, 4.2vw, 3.6rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.04em; text-wrap: balance; color: var(--color-ink, #e9ede5); } .ds-assay-fields { margin: 0; border-top: 1px solid var(--color-rule, #3a443f); } .ds-assay-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.5rem; padding: 1.25rem 0; border-bottom: 1px solid var(--color-rule, #3a443f); } .ds-assay-value { flex: 1 1 0; min-width: 0; margin: 0; font-family: 'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; font-size: 1.05rem; word-break: break-all; user-select: all; color: var(--color-ink, #e9ede5); } @media (prefers-reduced-motion: reduce) { .ds-assay-mark { animation-duration: 0.001ms; } }"
+    },
+    {
+      "name": "Readings Table",
+      "kind": "custom",
+      "refersTo": "sheet",
+      "description": "A ruled run of readings with mono column heads; below 768px each row restacks as a block and every cell carries its column name.",
+      "html": "<table class=\"ds-stack-table\"><thead><tr><th>key</th><th>signatures</th><th>class</th></tr></thead><tbody><tr class=\"ds-logged-row-t\"><td data-label=\"key\">52</td><td data-label=\"signatures\">184</td><td data-label=\"class\">short_period_prng</td></tr><tr class=\"ds-logged-row-t\"><td data-label=\"key\">58</td><td data-label=\"signatures\">96</td><td data-label=\"class\">weak_seed</td></tr></tbody></table>",
+      "css": ".ds-stack-table { width: 100%; border-collapse: collapse; text-align: left; font-family: 'Spline Sans Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; } .ds-stack-table th { padding: 0.75rem 1.5rem 0.75rem 0; border-bottom: 1px solid var(--color-rule, #3a443f); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.16em; color: var(--color-ink-3, #8a9384); } .ds-stack-table td { padding: 0.625rem 1.5rem 0.625rem 0; border-bottom: 1px solid var(--color-rule, #3a443f); font-size: 0.82rem; color: var(--color-ink, #e9ede5); } .ds-logged-row-t { transition: background-color 140ms linear; } .ds-logged-row-t:hover { background-color: color-mix(in oklab, var(--color-field, #6aa9d6) 9%, transparent); } @media (max-width: 767px) { .ds-stack-table, .ds-stack-table tbody, .ds-stack-table tr, .ds-stack-table td { display: block; width: 100%; } .ds-stack-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } .ds-stack-table tr { border-bottom: 1px solid var(--color-rule, #3a443f); padding: 0.7rem 0; } .ds-stack-table td { display: flex; align-items: baseline; gap: 0.85rem; padding: 0.2rem 0; border: 0; } .ds-stack-table td::before { content: attr(data-label); flex: 0 0 6.5rem; font-size: 0.66rem; color: var(--color-ink-3, #8a9384); } }"
+    },
+    {
+      "name": "Skip Link",
+      "kind": "button",
+      "refersTo": "skip-link",
+      "description": "The page's one button-shaped element: square, field ink on the tray colour, visible only on focus.",
+      "html": "<a class=\"ds-skip-link\" href=\"#log\">Skip to the log</a>",
+      "css": ".ds-skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; padding: 0.8rem 1.2rem; background: var(--color-field, #6aa9d6); color: var(--color-ground, #232a27); font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-weight: 600; border-radius: 0; text-decoration: none; } .ds-skip-link:focus, .ds-skip-link:focus-visible { left: 1rem; top: 1rem; outline: 2px solid var(--color-field, #6aa9d6); outline-offset: 3px; } .ds-skip-link:hover { background: color-mix(in oklab, var(--color-field, #6aa9d6) 88%, #fff); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Core Log",
+    "overview": "The page is a cored section through an ECDSA signature corpus, read top to bottom as a descent. The physical scene decides everything: split drill core laid in a tray under flat shed light. The tray is dark and slightly green — wet slate, not black — and the core laid in it is pale. So the page ground is the tray, every reading surface is pale stock laid on top of it, and figure and ground are literal: data sits on paper, prose sits on the tray.\n\nDensity is high and the chrome is thin. There are no card shells, no gradients, no glass, no glow and no shadows anywhere in the shipped build; depth is stated by ruling, hatch and position. Every mark is a measurement — hatch encodes class, width encodes value, position encodes depth — and the one authored motion moment is readings arriving as the reader passes their depth. The system refuses the category default it was built against: a centred claim over a terminal transcript followed by a row of feature cards.\n\nThe build's rarest commitment is arithmetic. The assay colour appears exactly once on the page — verified by pixel-sampling both full-page captures, where it occurs as a single 1px rule and nowhere else — and every class carries a hatch as well as a hue, so the sheet survives a photocopier and a reader who cannot separate green from amber.",
+    "keyCharacteristics": [
+      "Two grounds only: the dark tray for prose, pale stock for logged results.",
+      "One committed ink weight: 1px rules across the whole drawing system.",
+      "Square corners everywhere; radius is not part of the vocabulary.",
+      "Hatch carries class identity; hue is the fast read, never the only read.",
+      "One accent, used once, on the one recovered key.",
+      "One motion clock, resolved by default in the server-rendered markup.",
+      "One navigation axis: the depth rail, and nothing else."
+    ],
+    "rules": [
+      {
+        "name": "The Single Assay Rule",
+        "body": "The assay colour is used exactly once per page, on the one real recovered key. It is not an accent; it is a finding. Audit test: sample every pixel of a full-page capture; there must be exactly one contiguous run of it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Hatch-Before-Hue Rule",
+        "body": "No class is ever encoded by colour alone. Every lithology ships a hatch pattern and a hue together, and the chip travels with the label into running text and table cells, not only into the legend.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Vocabulary Rule",
+        "body": "Drawn marks take the same tokens as typeset ones, by job rather than by medium: structural lines and population edges in tray rule strong, gridlines in tray rule, annotation text inside a figure in ink-3, ordinary data marks in clean host rock, and knockouts against a figure panel in raised tray. An SVG never invents its own colour names.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Ground Rule",
+        "body": "Prose sits on the tray; logged results sit on stock. A block chooses one ground and stays on it — .sheet swaps ink, rules, selection and repro colour together, never colour by colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readings-Only Mono Rule",
+        "body": "Mono sets measured values and commands, never prose. The title block's finding row is set in the display face at 700 precisely because it is a sentence, not a reading. If a mono string reads as a sentence, it is in the wrong face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Balanced Head Rule",
+        "body": "Headings use text-balance and stay short enough for one or two lines; the standfirst beside them carries the sentence that says what the interval establishes.",
+        "section": "typography"
+      },
+      {
+        "name": "The Single Axis Rule",
+        "body": "The depth rail is the only navigation. There is no menu, no tab bar and no second way through; you move by descending. The rail is a scale, not a progress bar — its ticks are the logged intervals, positioned by their true extent. It is lg-only and fades in after 0.65 viewports of descent; below lg the descent itself is the navigation.",
+        "section": "layout"
+      },
+      {
+        "name": "The Nothing-Dropped Rule",
+        "body": "Narrow viewports re-arrange; they never drop a column, truncate a command or hide content behind a horizontal gesture. A command wraps (pre-wrap, overflow-wrap: anywhere) rather than running off the sheet with its tail unreachable.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "No shadow, no glow, no blur, no gradient, no glass. If an element needs to separate from its surroundings, it gets a 1px rule or a different ground.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Committed Ink Weight Rule",
+        "body": "1px rules, always, everywhere — section dividers, table rules, figure strokes, the assay mark, the depth rail. A log that hedges between hairlines and heavy borders reads as a web page wearing a log's clothes. Emphasis comes from colour and length, never from thickness.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Resolved-By-Default Rule",
+        "body": "--in initialises to 1, so the server-rendered sheet is already finished. The controller sets it to 0 only for elements it can prove are below the fold, and only once it knows JS is running and motion is wanted; the collar's tray effect is the only other thing permitted to set it to 0, under the same conditions. No-JS and reduced motion get every reading immediately — the preference removes the animation, it never substitutes a lesser one and never hides content.",
+        "section": "components"
+      },
+      {
+        "name": "The One Clock Rule",
+        "body": "There is one authored motion moment: readings arriving as the reader passes their depth. No section has an entrance of its own. Anything that animates must be a reading arriving.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do pair every class hue with its hatch pattern, and carry the chip into running text and table cells rather than leaving it in the legend.",
+      "Do draw every rule, stroke and divider at 1px.",
+      "Do keep corners square (0px) on every surface.",
+      "Do choose one ground per block — tray for prose, stock for logged results — and swap ink, rules and repro colour together with it.",
+      "Do set measured values in Spline Sans Mono with tabular figures, and prose in Archivo.",
+      "Do ship every animated element in its resolved state in the markup, and animate only below-fold elements through --in.",
+      "Do give narrow viewports their own arrangement when scaling would make type unreadable — a second authored composition, not a shrunk first one.",
+      "Do restack wide tables below 768px with data-label on every cell.",
+      "Do attach a repro command to every claim, set as a selectable, wrapping line.",
+      "Do draw SVG marks from the same tokens as typeset ones — rule-strong for structural lines, rule for gridlines, ink-3 for annotation text, clean for ordinary data marks, ground-raised for knockouts."
+    ],
+    "donts": [
+      "Don't use the assay colour anywhere but the single recovered-key mark. A second use deletes the first one's meaning.",
+      "Don't encode a class, state or category by hue alone.",
+      "Don't set prose in the mono face, or use mono as a costume for \"technical\".",
+      "Don't add a shadow, gradient, glass, blur or glow; the system has none and depth is carried by ruling, ground and position.",
+      "Don't wrap content in a card shell with a radius.",
+      "Don't add a second navigation — no menu, no tab bar, no in-page index competing with the depth rail.",
+      "Don't give a section its own entrance animation, or translate an element into place under a reader mid-read.",
+      "Don't put a kicker, eyebrow or section number above a heading.",
+      "Don't hide content behind a horizontal gesture on a phone, or truncate a command.",
+      "Don't leave browser surfaces — selection, caret, scrollbar, focus ring — at their defaults."
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qi-fingerprint"
+version = "0.1.0"
+description = "Quantum-inspired ECDSA nonce-bias triage: Screen -> Crack -> Fingerprint -> Propagate over unlabeled signature corpora."
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pandas>=2.1",
+    "pyarrow>=14",
+    "fastecdsa>=2.3",
+    "cysignals>=1.11",
+    "fpylll>=0.6",
+    "scikit-learn>=1.3",
+    "xgboost>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+qi = "qi_fingerprint.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["qi_fingerprint*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+*.egg-info/
+/data/*
+*.parquet
+models/
+
+# Scratch scripts for local UI auditing (puppeteer screenshots, DOM probes).
+tools-dev/
+
+# The generated corpora are large and reproducible from the generator; the one
+# exception is the pinned mainnet positive control, which is public chain data
+# (address, shared r, txids) and is what the recovery test runs against.
+!/data/control-252474.json
+
+# Local UI audit output: full-page capture tiles and stitched screenshots.
+# `**/` because these live under site/.impeccable as well as the repo root, and a
+# pattern with a slash in it is anchored to the file it is written in.
+**/.impeccable/review/
+**/.impeccable/hook.cache.json
+**/.impeccable/questions/

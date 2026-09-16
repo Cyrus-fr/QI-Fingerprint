@@ -1,0 +1,441 @@
+@import "tailwindcss";
+
+/* Explicit source roots.
+   Tailwind v4 auto-detects sources but respects .gitignore, and a bare rule
+   elsewhere in the repo once silently excluded components/data/** -- which dropped
+   every utility used only in the data layer and broke those layouts with no build
+   error. Declaring the roots makes scanning independent of ignore rules. */
+@source "../app";
+@source "../components";
+@source "../content";
+
+/* ---------------------------------------------------------------------------
+   THE CORE LOG
+
+   The evidence read as a cored section. One continuous depth axis the reader
+   descends; every hatch, width and stroke on it is a measurement.
+
+   The physical scene decides the light: split drill core photographed in a tray
+   under flat shed light. The tray is dark and slightly green -- wet slate, not
+   black -- and the core sample laid in it is pale. So the page ground is the
+   tray, and every reading surface is stock laid on top of it. Figure and ground
+   are literal here: data sits on paper, prose sits on the tray.
+
+   Two rules govern the whole system:
+
+     1. Every mark is a measurement. Hatch encodes class, width encodes value,
+        position encodes depth. Nothing is drawn that does not read.
+     2. The assay colour appears EXACTLY ONCE on the page, on the one real key
+        recovered from block 252,474. It is not an accent; it is a finding.
+   --------------------------------------------------------------------------- */
+@theme {
+  /* -- the tray ------------------------------------------------------------ */
+  --color-ground: #232a27;
+  --color-ground-raised: #2c3430;
+  --color-rule: #3a443f;
+  --color-rule-strong: #4d5a54;
+
+  /* -- the core, and the stock it is logged on ----------------------------- */
+  --color-stock: #dfe4d9;
+  --color-stock-rule: #b9c2b3;
+  --color-stock-ink: #171c19;
+
+  /* -- ink on the tray ----------------------------------------------------- */
+  --color-ink: #e9ede5;
+  --color-ink-2: #a4ae9f;
+  --color-ink-3: #8a9384;
+
+  /* -- field ink: annotation, marked intervals, the depth cursor ------------ */
+  --color-field: #6aa9d6;
+  --color-field-deep: #1d5c8a;
+
+  /* -- the assay. one use. ------------------------------------------------- */
+  --color-assay: #d2542f;
+
+  /* -- lithologies. every one also carries a hatch, so nothing reads by hue
+        alone; see <HatchDefs> for the patterns. ----------------------------- */
+  --color-truncated_msb: #5b9dd9;
+  --color-modular_reduction: #57a87a;
+  --color-short_period_prng: #c2557f;
+  --color-weak_seed: #cf9440;
+  --color-clean: #7d857a;
+
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-spline-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+:root {
+  color-scheme: dark;
+  /* The depth cursor's live position, written by the descent controller and read
+     by the rail, the tracks and every figure. One value, one grammar. */
+  --depth: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-ground);
+}
+
+body {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------------------------------------------------------------------------
+   Measured values. Mono is for readings only -- never for prose, never as a
+   costume for "technical". Tabular figures so a column of numbers aligns to the
+   millimetre, which is the whole reason a log is set this way.
+   --------------------------------------------------------------------------- */
+.reading {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+  letter-spacing: -0.01em;
+}
+
+/* A 256-bit value is one long word. It must be readable and copyable whole, and
+   on a log sheet it wraps inside its column rather than scrolling out of it. */
+.hexline {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  word-break: break-all;
+  line-height: 1.7;
+  user-select: all;
+}
+
+/* ---------------------------------------------------------------------------
+   Browser surfaces. The parts not drawn here still carry the world: selection,
+   caret, scrollbar, focus ring. Left at their defaults they belong to no design
+   system at all.
+   --------------------------------------------------------------------------- */
+::selection {
+  background: var(--color-field);
+  color: var(--color-ground);
+}
+.on-stock ::selection,
+.on-stock::selection {
+  background: var(--color-field-deep);
+  color: var(--color-stock);
+}
+
+html {
+  caret-color: var(--color-field);
+  scrollbar-color: var(--color-rule-strong) var(--color-ground);
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ground);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule-strong);
+  border: 3px solid var(--color-ground);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-3);
+}
+/* Styling ::-webkit-scrollbar at all makes Chrome draw its default stepper
+   buttons -- two arrow blocks the rest of this sheet has no vocabulary for.
+   Nothing else on the page has a button with an arrow in it. */
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-field);
+  outline-offset: 3px;
+  border-radius: 0;
+}
+
+a {
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.8rem 1.2rem;
+  background: var(--color-field);
+  color: var(--color-ground);
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* ---------------------------------------------------------------------------
+   The log sheet.
+
+   One committed ink weight across the entire drawing system: 1px rules, always.
+   A log that hedges between hairlines and heavy borders reads as a web page
+   wearing a log's clothes.
+   --------------------------------------------------------------------------- */
+.sheet {
+  background: var(--color-stock);
+  color: var(--color-stock-ink);
+}
+
+/* Ruled stock: the faint horizontal ruling of log paper, at the same rhythm as
+   the type. Real ruling, not a texture -- it is what the readings are written
+   between.
+
+   The rule sits ON THE LINE BOX BOUNDARY, not under the baseline. Drawn a couple
+   of pixels under the baseline it cut every line on the sheet: the label's
+   descenders crossed it, which was the intent, but the mono figure beside the
+   label is set larger and lifted onto the label's baseline, so it hung three
+   pixels BELOW the same rule. One rule through two sizes of type cannot be under
+   both baselines at once, and the block read as type and ruling out of register.
+   On the boundary it is under all of them.
+
+   "Same rhythm" is a contract with the markup. Every line box on ruled stock is
+   exactly one pitch (2.25rem, `leading-9`) and every gap between blocks a whole
+   number of pitches (`p-9`, `mb-9`, `space-y-9`), so the boundaries the rules are
+   drawn on are the boundaries the type actually has. The pitch is 2.25rem rather
+   than 1.75rem because the tallest glyph box on this stock is the 1.25rem mono
+   figure: 24px of glyph, lifted 3px, needs 27 of the 28 pixels a 1.75rem box has,
+   which left no gap for a rule to sit in. Measured in Chrome with the webfonts
+   loaded; rem throughout, so a different root size moves type and ruling together. */
+.ruled {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--color-stock-rule) 0,
+    var(--color-stock-rule) 1px,
+    transparent 1px,
+    transparent 2.25rem
+  );
+}
+
+/* The tray's own grain, at the threshold of visibility. Static: an animated
+   grain would fight the reduced-motion contract for nothing. */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------------------------------------------------------------------------
+   Readings tables below `md`.
+
+   A horizontally scrolling table technically keeps every column, but on a 390px
+   sheet it hides two thirds of them behind a gesture and clips class names
+   mid-word. "Nothing may be dropped" and "make it readable" both fail there, so
+   each row becomes its own small block and every cell carries its column name.
+   The markup stays a real <table>; only the presentation stacks.
+   --------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .stack-table,
+  .stack-table tbody,
+  .stack-table tr,
+  .stack-table td {
+    display: block;
+    width: 100%;
+  }
+  .stack-table caption {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .stack-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .stack-table tr {
+    border-bottom: 1px solid var(--color-rule);
+    padding: 0.7rem 0;
+  }
+  .sheet .stack-table tr {
+    border-bottom-color: var(--color-stock-rule);
+  }
+  .stack-table td {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    padding: 0.2rem 0 !important;
+    border: 0;
+  }
+  .stack-table td::before {
+    content: attr(data-label);
+    flex: 0 0 6.5rem;
+    font-size: 0.66rem;
+    color: var(--color-ink-3);
+  }
+  .sheet .stack-table td::before {
+    color: color-mix(in oklab, var(--color-stock-ink) 55%, transparent);
+  }
+}
+
+/* A command is copied, so it must be whole -- at every width, not only on a
+   phone. It wraps inside its column instead of scrolling: a scrollbar hides the
+   tail of the line behind a gesture, and a desktop browser draws the bar straight
+   through the sheet. Wrapped lines hang 2ch in, so a continuation never reads as
+   a second command. Copying is unaffected; soft wraps are not newlines. */
+.cmd {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding-left: 2ch;
+  text-indent: -2ch;
+}
+
+/* ---------------------------------------------------------------------------
+   The descent.
+
+   ONE authored moment, expressed continuously: readings arrive as the reader
+   passes their depth. Nothing else on the page animates, and no section carries
+   an entrance of its own.
+
+   `--in` is written per element by the descent controller: 0 before the reading
+   is reached, 1 once it has arrived. Every animated property reads from it, so
+   the whole page moves on one clock.
+   --------------------------------------------------------------------------- */
+@property --in {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+
+/* A track draws itself along its own length as its depth is reached. */
+.track-draw {
+  stroke-dasharray: var(--len, 1000);
+  stroke-dashoffset: calc(var(--len, 1000) * (1 - var(--in)));
+  transition: stroke-dashoffset 900ms cubic-bezier(0.16, 0.84, 0.28, 1);
+}
+
+/* A reading arrives the way a log line arrives under a moving head: it is
+   wiped in from the leading edge rather than faded up in place. The mask is the
+   motion, so nothing translates and no label slides out from under a reader --
+   a 6px lift repeated on every section is the entrance this page must not have.
+   `--in` still drives it, so one clock still governs the sheet. */
+.reading-settle {
+  opacity: calc(0.08 + 0.92 * var(--in));
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 calc(var(--in) * 190%),
+    transparent calc(var(--in) * 190% + 5%)
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 calc(var(--in) * 190%),
+    transparent calc(var(--in) * 190% + 5%)
+  );
+  transition:
+    opacity 760ms cubic-bezier(0.16, 0.84, 0.28, 1),
+    -webkit-mask-image 760ms cubic-bezier(0.16, 0.84, 0.28, 1),
+    mask-image 760ms cubic-bezier(0.16, 0.84, 0.28, 1);
+}
+
+/* The tray cuts in bar by bar, each lamina scaling from the collar edge on its
+   own delay: the section being logged as the head passes down it. This is the
+   page's one cinematic beat and it is made entirely of measurements. */
+.lamina {
+  transform-origin: left center;
+  transform: scaleX(var(--in));
+  transition: transform 520ms cubic-bezier(0.16, 0.84, 0.28, 1);
+}
+
+/* The one assay mark. It does not loop; it arrives once and stays. */
+@keyframes assay-strike {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scaleX(1.04);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.assay-mark {
+  transform-origin: left center;
+  animation: assay-strike 1150ms cubic-bezier(0.16, 0.84, 0.28, 1) both;
+}
+
+/* The cascade figure's own ignition: it fans out in depth order once, then the
+   same elements answer the pointer instead of the scroll. Opacity and radius
+   only, so no label slides out from under a reader mid-read. */
+.cascade-anim {
+  transition:
+    opacity 620ms cubic-bezier(0.16, 0.84, 0.28, 1),
+    r 200ms ease,
+    stroke-width 200ms ease;
+}
+.cascade-anim.settled {
+  transition-duration: 180ms;
+}
+
+/* The three lines of the derivation resolve in the order they are read. */
+.deriv-step {
+  transition:
+    opacity 640ms cubic-bezier(0.16, 0.84, 0.28, 1),
+    transform 640ms cubic-bezier(0.16, 0.84, 0.28, 1);
+}
+
+/* Hover on a logged row raises its own rule rather than floating the row: the
+   sheet is flat, and depth here is a reading, not a shadow. */
+.logged-row {
+  transition: background-color 140ms linear;
+}
+.logged-row:hover {
+  background-color: color-mix(in oklab, var(--color-field) 9%, transparent);
+}
+.sheet .logged-row:hover {
+  background-color: color-mix(in oklab, var(--color-field-deep) 10%, transparent);
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion is a hard switch, not a dial. Every reading is already at its
+   resolved value in the markup; honouring the preference means the descent
+   simply does not animate, never that anything is hidden.
+   --------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .track-draw {
+    stroke-dashoffset: 0 !important;
+  }
+  .reading-settle,
+  .deriv-step {
+    opacity: 1 !important;
+    transform: none !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+  .lamina {
+    transform: none !important;
+  }
+}

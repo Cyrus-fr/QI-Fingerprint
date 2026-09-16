@@ -1,0 +1,32 @@
+{
+  "range": [
+    252474,
+    252474
+  ],
+  "n_signatures_scanned": 566,
+  "cross_key_r_collisions": 0,
+  "findings": [
+    {
+      "recovered": true,
+      "addresses": [
+        "19qnLpn9it7csR9sEay1XrFyfAmUNoXYk4"
+      ],
+      "r": "23897537d4d2d674e842ed82bf119d4d99c082810b30b4ee4a21a6ca7b6c7f05",
+      "detail": "same-sign pair",
+      "inputs": [
+        {
+          "txid": "f92d4310ccc12bc41d2e51ab17b80c942a9343fce7a63a41e3d2db646fe05661",
+          "vin": 0,
+          "height": 252474,
+          "low_s": true
+        },
+        {
+          "txid": "f92d4310ccc12bc41d2e51ab17b80c942a9343fce7a63a41e3d2db646fe05661",
+          "vin": 1,
+          "height": 252474,
+          "low_s": true
+        }
+      ]
+    }
+  ]
+}

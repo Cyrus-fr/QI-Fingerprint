@@ -1,0 +1,23 @@
+# Run from the repo root:
+#   docker compose build
+#   docker compose run --rm pipeline pytest -q
+#   docker compose run --rm pipeline qi run --corpus data/demo
+#
+# The repo is bind-mounted at /app, so code edits are picked up without a rebuild;
+# rebuild only when requirements.txt changes.
+#
+# The UI is no longer a compose service: the dashboard is the static Next.js site
+# in site/, which builds to plain HTML and needs no Python at run time. See its
+# commands in the README. The container's job is the pipeline and the data export.
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: qi-fingerprint:latest
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - PYTHONPATH=/app
+    command: pytest

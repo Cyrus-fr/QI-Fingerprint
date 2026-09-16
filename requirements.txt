@@ -1,0 +1,14 @@
+# Runtime + test deps for the QI-Fingerprint pipeline container.
+# No UI deps: the dashboard is the static Next.js site in site/, built by npm.
+# matplotlib stays -- tools/stage1_operating_window.py plots with it.
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+pyarrow>=14
+fastecdsa>=2.3
+cysignals>=1.11
+fpylll>=0.6
+scikit-learn>=1.3
+xgboost>=2.0
+pytest>=7.4
+matplotlib>=3.7

@@ -1,0 +1,1894 @@
+{
+  "seed": 23,
+  "curve": "secp256k1",
+  "stats": {
+    "nKeys": 70,
+    "nSignatures": 432,
+    "rCollisions": 41,
+    "expectedRandomCollisions": 8.039927478050724e-73,
+    "nIntraKeyReuse": 2,
+    "nLatticeCandidates": 2,
+    "nCohorts": 4,
+    "nCracked": 6,
+    "nDiagnosed": 6,
+    "nAttributed": 14,
+    "diagnosisAccuracy": 1.0,
+    "attributionAccuracy": 1.0,
+    "cleanKeysAttributed": 0
+  },
+  "attributedByClass": {
+    "short_period_prng": 6,
+    "weak_seed": 6,
+    "truncated_msb": 1,
+    "modular_reduction": 1
+  },
+  "perClassDiagnosis": {
+    "modular_reduction": {
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "short_period_prng": {
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "truncated_msb": {
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    },
+    "weak_seed": {
+      "n": 3,
+      "correct": 3,
+      "accuracy": 1.0
+    }
+  },
+  "cracks": [
+    {
+      "keyId": 40,
+      "method": "lattice",
+      "verified": true,
+      "d": "1f0fcd25c03d10ff8ae12b7d76d4aea383b4edfccfc4b254968c2f5bc04ec3a2",
+      "diagnosis": "truncated_msb",
+      "confidence": 0.95,
+      "truth": "truncated_msb",
+      "correct": true,
+      "nSignatures": 70
+    },
+    {
+      "keyId": 46,
+      "method": "lattice",
+      "verified": true,
+      "d": "45a6485e43ab195c82fea45b0909103da1c617fbefb9dd43f50a38207a13ffc6",
+      "diagnosis": "modular_reduction",
+      "confidence": 0.95,
+      "truth": "modular_reduction",
+      "correct": true,
+      "nSignatures": 90
+    },
+    {
+      "keyId": 52,
+      "method": "reuse",
+      "verified": true,
+      "d": "1c6752bcf9c2699aab4e60dc9552532dd1f9750423cbdc84284f4e2d2496c012",
+      "diagnosis": "short_period_prng",
+      "confidence": 0.9,
+      "truth": "short_period_prng",
+      "correct": true,
+      "nSignatures": 12
+    },
+    {
+      "keyId": 58,
+      "method": "seed",
+      "verified": true,
+      "d": "5963b89d43fa5f67e3d6a7fced7e3cdf29bc7f7d0da58e06d11ff4fd725b76fc",
+      "diagnosis": "weak_seed",
+      "confidence": 0.95,
+      "truth": "weak_seed",
+      "correct": true,
+      "nSignatures": 8
+    },
+    {
+      "keyId": 59,
+      "method": "seed",
+      "verified": true,
+      "d": "e91aaffa6d926d95cd40aa3217ab95264cfa8b1356755ff9ac67670fc77957bf",
+      "diagnosis": "weak_seed",
+      "confidence": 0.95,
+      "truth": "weak_seed",
+      "correct": true,
+      "nSignatures": 3
+    },
+    {
+      "keyId": 60,
+      "method": "seed",
+      "verified": true,
+      "d": "2c9a133c044979e9bb8fa950a43544d96055d59060b3bffbaa9c8733882d6650",
+      "diagnosis": "weak_seed",
+      "confidence": 0.95,
+      "truth": "weak_seed",
+      "correct": true,
+      "nSignatures": 4
+    }
+  ],
+  "keys": {
+    "40": {
+      "keyId": 40,
+      "d": "1f0fcd25c03d10ff8ae12b7d76d4aea383b4edfccfc4b254968c2f5bc04ec3a2",
+      "diagnosis": "truncated_msb",
+      "confidence": 0.95,
+      "nNonces": 70,
+      "msbBitMeans": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.514286,
+        0.642857,
+        0.557143,
+        0.485714,
+        0.371429,
+        0.528571,
+        0.528571,
+        0.514286,
+        0.514286,
+        0.557143,
+        0.642857,
+        0.542857,
+        0.6,
+        0.514286,
+        0.514286,
+        0.557143,
+        0.514286,
+        0.428571,
+        0.528571,
+        0.5
+      ],
+      "deadMsbBits": 12,
+      "spectrum": [
+        1.0,
+        1.0,
+        0.999999,
+        0.999999,
+        0.999998,
+        0.999997,
+        0.999995,
+        0.999994,
+        0.999993,
+        0.999991,
+        0.999989,
+        0.999987,
+        0.999984,
+        0.999982,
+        0.999979,
+        0.999976,
+        0.999973,
+        0.99997,
+        0.999967,
+        0.999963,
+        0.999959,
+        0.999955,
+        0.999951,
+        0.999947,
+        0.999942,
+        0.999938,
+        0.999933,
+        0.999928,
+        0.999922,
+        0.999917,
+        0.999911,
+        0.999905,
+        0.999899,
+        0.999893,
+        0.999887,
+        0.99988,
+        0.999874,
+        0.999867,
+        0.999859,
+        0.999852,
+        0.999845,
+        0.999837,
+        0.999829,
+        0.999821,
+        0.999813,
+        0.999805,
+        0.999796,
+        0.999787,
+        0.999778,
+        0.999769,
+        0.99976,
+        0.99975,
+        0.99974,
+        0.999731,
+        0.999721,
+        0.99971,
+        0.9997,
+        0.999689,
+        0.999678,
+        0.999667,
+        0.999656,
+        0.999645,
+        0.999633,
+        0.999622
+      ],
+      "nonceSamples": [
+        "000e93c46a895d79f18726dfaf8fed53c9625eecc61bb6597e0352eb84f07052",
+        "00061d08892942b90400d83b8c37e19b9825f09f7ae6a386b468e763ad80575b",
+        "000b45f1bb8ba28c9030b9d94122669fcd5831a96b5187036b32b63dd8e05faf",
+        "000c86b71dd8ff9a068db6bb5e1fcdc3176cb0300bce130e6c9d69c75ad16ebf",
+        "000cfca2b5310aea0bdc3b0d7e46e39fbe545c5c90131fe32a96522397a3657f",
+        "000a12fb2e739992d03e4c8ecc26cee3bb554fb2d8a07341c1b60f3088be6f8b",
+        "000ca64485b1c801d7f5d83b084bed23b0116c10a1c782f74a218210443de13c",
+        "0007669a230d0a93e1872d55b8dae6e58f25bebd76a3850943afd072b509fe45"
+      ],
+      "evidence": {
+        "n_nonces": 70,
+        "min_leading_zero_bits": 12,
+        "bias_magnitude": 1.0,
+        "range_ratio": 0.999462,
+        "distinct_ratio": 1.0,
+        "collision_pairs": 0,
+        "lag1_autocorr": -0.165849,
+        "spectrum_peak": 1.0,
+        "ks_stat": 0.999756
+      }
+    },
+    "46": {
+      "keyId": 46,
+      "d": "45a6485e43ab195c82fea45b0909103da1c617fbefb9dd43f50a38207a13ffc6",
+      "diagnosis": "modular_reduction",
+      "confidence": 0.95,
+      "nNonces": 90,
+      "msbBitMeans": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.288889,
+        0.333333,
+        0.477778,
+        0.522222,
+        0.533333,
+        0.5,
+        0.4,
+        0.488889,
+        0.533333,
+        0.411111,
+        0.522222,
+        0.488889,
+        0.544444,
+        0.566667,
+        0.511111,
+        0.5,
+        0.544444,
+        0.511111,
+        0.588889,
+        0.466667,
+        0.522222,
+        0.455556,
+        0.566667,
+        0.444444
+      ],
+      "deadMsbBits": 8,
+      "spectrum": [
+        0.999987,
+        0.999948,
+        0.999882,
+        0.999791,
+        0.999673,
+        0.99953,
+        0.99936,
+        0.999164,
+        0.998942,
+        0.998694,
+        0.99842,
+        0.998119,
+        0.997793,
+        0.997441,
+        0.997063,
+        0.996658,
+        0.996228,
+        0.995772,
+        0.99529,
+        0.994782,
+        0.994248,
+        0.993688,
+        0.993102,
+        0.992491,
+        0.991854,
+        0.991191,
+        0.990502,
+        0.989788,
+        0.989048,
+        0.988283,
+        0.987491,
+        0.986675,
+        0.985833,
+        0.984965,
+        0.984072,
+        0.983154,
+        0.98221,
+        0.981241,
+        0.980247,
+        0.979228,
+        0.978183,
+        0.977114,
+        0.976019,
+        0.9749,
+        0.973755,
+        0.972586,
+        0.971392,
+        0.970173,
+        0.96893,
+        0.967662,
+        0.966369,
+        0.965052,
+        0.96371,
+        0.962344,
+        0.960953,
+        0.959539,
+        0.9581,
+        0.956637,
+        0.95515,
+        0.953639,
+        0.952104,
+        0.950546,
+        0.948964,
+        0.947358
+      ],
+      "nonceSamples": [
+        "00baf63a2cee7db58422529cada76e11f87ae1db23c5be5b4c563f4ef6bab2df",
+        "004aa040248f05bb3d9e2799e4aff1d77e1ab507a3e11b66fee1e9dbe79c6171",
+        "0028e45a012c20a4302a411bf346fe3e084abf12c7c4cbc9097b410556063d46",
+        "000c975c83f316efbc7bfc9eb40ca9e673647922d88df761c1dc0d2ff2227c79",
+        "006d27e8b91a6aa0f63f836bc34b03fcda2c8d1da04a2eaeba185152612f2c08",
+        "0032a3361cfe57c5f6cdaca03f5e674e6326943b982abf8b60618789a97efcf9",
+        "00b11b0dd33116ba1a29b6df0c7f5a4194c6ad44f13bcb9eb8f3db912c39301f",
+        "008e19e4081030d89cad95a6b7f316f0d07f9030ae03dce124364d9f034d2a9c"
+      ],
+      "evidence": {
+        "n_nonces": 90,
+        "min_leading_zero_bits": 8,
+        "bias_magnitude": 0.999987,
+        "range_ratio": 0.73032,
+        "distinct_ratio": 1.0,
+        "collision_pairs": 0,
+        "lag1_autocorr": -0.055541,
+        "spectrum_peak": 0.999987,
+        "ks_stat": 0.997147
+      }
+    },
+    "52": {
+      "keyId": 52,
+      "d": "1c6752bcf9c2699aab4e60dc9552532dd1f9750423cbdc84284f4e2d2496c012",
+      "diagnosis": "short_period_prng",
+      "confidence": 0.9,
+      "nNonces": 12,
+      "msbBitMeans": [
+        0.333333,
+        0.666667,
+        0.666667,
+        0.5,
+        0.333333,
+        0.333333,
+        0.5,
+        0.333333,
+        0.833333,
+        0.833333,
+        0.833333,
+        0.666667,
+        0.5,
+        0.166667,
+        0.833333,
+        0.333333,
+        0.833333,
+        0.5,
+        0.833333,
+        0.666667,
+        0.166667,
+        0.5,
+        0.5,
+        0.666667,
+        0.5,
+        0.666667,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.833333,
+        0.333333
+      ],
+      "deadMsbBits": 0,
+      "spectrum": [
+        0.74771,
+        0.427098,
+        0.524592,
+        0.334931,
+        0.38975,
+        0.656569,
+        0.433159,
+        0.19558,
+        0.529144,
+        0.504881,
+        0.679809,
+        0.953482,
+        0.760357,
+        0.343694,
+        0.50638,
+        0.46269,
+        0.342045,
+        0.578524,
+        0.44134,
+        0.07647,
+        0.516622,
+        0.558346,
+        0.571361,
+        0.819711,
+        0.712031,
+        0.271707,
+        0.472053,
+        0.559267,
+        0.339545,
+        0.437936,
+        0.404034,
+        0.096695,
+        0.480078,
+        0.570694,
+        0.445637,
+        0.615244,
+        0.606413,
+        0.221677,
+        0.415425,
+        0.609555,
+        0.404245,
+        0.276226,
+        0.326851,
+        0.177902,
+        0.414631,
+        0.529884,
+        0.335266,
+        0.365119,
+        0.456507,
+        0.193293,
+        0.331537,
+        0.604902,
+        0.50152,
+        0.219339,
+        0.232827,
+        0.234879,
+        0.325382,
+        0.430863,
+        0.279162,
+        0.099445,
+        0.2857,
+        0.178648,
+        0.222367,
+        0.545589
+      ],
+      "nonceSamples": [
+        "5edb77c877e7ef54ee07c303ef7762c6837dad1de82847941c5a227fb3de88bf",
+        "6070e15a677860644b11537afb6541ccfe179a992776ca82881d232a28d079dd",
+        "60fad1bf69cb91c810b61e22537b7c0abfa207d0bb490df5b955062a12198a43",
+        "b3e3b6f6fef2abd49672c5be955ff0bf94bfa087929b7089ad4f03daab5a9879",
+        "8beeb9473f5357f91ac55dd25d0fe1f4d7f2604941bcfafb21a620af10fe95b5",
+        "74b2a622a998b83f4f24504230411a5dd6f921de851679d770f0434be7d42078",
+        "5edb77c877e7ef54ee07c303ef7762c6837dad1de82847941c5a227fb3de88bf",
+        "6070e15a677860644b11537afb6541ccfe179a992776ca82881d232a28d079dd"
+      ],
+      "evidence": {
+        "n_nonces": 12,
+        "min_leading_zero_bits": 0,
+        "bias_magnitude": 0.74771,
+        "range_ratio": 0.702693,
+        "distinct_ratio": 0.5,
+        "collision_pairs": 6,
+        "lag1_autocorr": 0.164046,
+        "spectrum_peak": 0.953482,
+        "ks_stat": 0.370536
+      }
+    },
+    "58": {
+      "keyId": 58,
+      "d": "5963b89d43fa5f67e3d6a7fced7e3cdf29bc7f7d0da58e06d11ff4fd725b76fc",
+      "diagnosis": "weak_seed",
+      "confidence": 0.95,
+      "nNonces": 8,
+      "msbBitMeans": [
+        0.375,
+        0.125,
+        0.5,
+        0.625,
+        0.375,
+        0.0,
+        0.25,
+        0.375,
+        0.375,
+        0.625,
+        0.625,
+        0.5,
+        0.625,
+        0.25,
+        0.875,
+        0.5,
+        0.875,
+        0.5,
+        0.5,
+        0.375,
+        0.5,
+        0.375,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.75,
+        0.375,
+        0.5,
+        0.5,
+        0.375,
+        0.375
+      ],
+      "deadMsbBits": 0,
+      "spectrum": [
+        0.202869,
+        0.514599,
+        0.367312,
+        0.144531,
+        0.556143,
+        0.272643,
+        0.15981,
+        0.404136,
+        0.276281,
+        0.267465,
+        0.570034,
+        0.463584,
+        0.57251,
+        0.127556,
+        0.443104,
+        0.181709,
+        0.28923,
+        0.080477,
+        0.406833,
+        0.259318,
+        0.458088,
+        0.124515,
+        0.348033,
+        0.559688,
+        0.077265,
+        0.447202,
+        0.467516,
+        0.310496,
+        0.318279,
+        0.246817,
+        0.080725,
+        0.642276,
+        0.158785,
+        0.174418,
+        0.138435,
+        0.164842,
+        0.268572,
+        0.276492,
+        0.193069,
+        0.343859,
+        0.332204,
+        0.277863,
+        0.321483,
+        0.414899,
+        0.350607,
+        0.425773,
+        0.320264,
+        0.182758,
+        0.28183,
+        0.139733,
+        0.621278,
+        0.234255,
+        0.529676,
+        0.089553,
+        0.413904,
+        0.523851,
+        0.350106,
+        0.424921,
+        0.245096,
+        0.294211,
+        0.283943,
+        0.354281,
+        0.294703,
+        0.378432
+      ],
+      "nonceSamples": [
+        "102fa83517e3472806a0ef981dbf08e253bef2a3a56d60bf8684e604d7d6bf5f",
+        "122ee36c06059312ecfa2f27d2c0313c198295a2a8d34d5a205e8faed77dc44b",
+        "287bf1786097118b9a001c0bf7441796d12139ea2fb4a0bc0bae581d34c28350",
+        "23f382bfdd63e32fa99631f60857a2a10889db4ac8e65338986233f86beaa3e1",
+        "b0039fa12f4442a24448be25e4b97cb01d0673cc11bd4397e2a1fb3d2111e355",
+        "5168dce6f384807b23eb040af5752077a36271cc977dfa382d191f2816a7e3ce",
+        "b9d20c4a394e24524919af2aaa5e0e5ef12efe641ff801f629387496caaf8962",
+        "88dae3805d44295e01a5c7fdf97fb1d593f7340bf1309d8618724dc196add179"
+      ],
+      "evidence": {
+        "n_nonces": 8,
+        "min_leading_zero_bits": 0,
+        "bias_magnitude": 0.202869,
+        "range_ratio": 0.725861,
+        "distinct_ratio": 1.0,
+        "collision_pairs": 0,
+        "lag1_autocorr": 0.338489,
+        "spectrum_peak": 0.642276,
+        "ks_stat": 0.341859
+      }
+    },
+    "59": {
+      "keyId": 59,
+      "d": "e91aaffa6d926d95cd40aa3217ab95264cfa8b1356755ff9ac67670fc77957bf",
+      "diagnosis": "weak_seed",
+      "confidence": 0.95,
+      "nNonces": 3,
+      "msbBitMeans": [
+        0.0,
+        0.666667,
+        0.333333,
+        0.333333,
+        0.666667,
+        0.333333,
+        0.0,
+        0.333333,
+        0.666667,
+        0.333333,
+        0.666667,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.333333,
+        0.0,
+        0.333333,
+        0.666667,
+        0.666667,
+        0.666667,
+        0.666667,
+        0.333333,
+        0.333333,
+        0.333333,
+        0.0,
+        0.666667,
+        0.666667,
+        0.666667,
+        0.0,
+        0.333333
+      ],
+      "deadMsbBits": 1,
+      "spectrum": [
+        0.496904,
+        0.329856,
+        0.309814,
+        0.604522,
+        0.809471,
+        0.332047,
+        0.778624,
+        0.522942,
+        0.403712,
+        0.352971,
+        0.554068,
+        0.992872,
+        0.432175,
+        0.314121,
+        0.216933,
+        0.683912,
+        0.828136,
+        0.321859,
+        0.736422,
+        0.444587,
+        0.495608,
+        0.378561,
+        0.601657,
+        0.971643,
+        0.363185,
+        0.310425,
+        0.131251,
+        0.757445,
+        0.834061,
+        0.302044,
+        0.683936,
+        0.377774,
+        0.583258,
+        0.402479,
+        0.638406,
+        0.93677,
+        0.295849,
+        0.321382,
+        0.078025,
+        0.822494,
+        0.826973,
+        0.273858,
+        0.622465,
+        0.334451,
+        0.66473,
+        0.421543,
+        0.66357,
+        0.889022,
+        0.241613,
+        0.346288,
+        0.109255,
+        0.877112,
+        0.806911,
+        0.239631,
+        0.553514,
+        0.326529,
+        0.738296,
+        0.433416,
+        0.676816,
+        0.829481,
+        0.219773,
+        0.381744,
+        0.178771,
+        0.919848
+      ],
+      "nonceSamples": [
+        "48e716598aa5323516235de31ff14482292a0a360e88d13270e733cde5e9ebe5",
+        "09279f1403529180d730697c96137628533c46361c5bdeac0cb0939d4823f947",
+        "7487288c798faaad4151183aa716e28fa3df252eb11f46694b81f75c2bb922a4"
+      ],
+      "evidence": {
+        "n_nonces": 3,
+        "min_leading_zero_bits": 1,
+        "bias_magnitude": 0.496904,
+        "range_ratio": 0.910375,
+        "distinct_ratio": 1.0,
+        "collision_pairs": 0,
+        "lag1_autocorr": -1.0,
+        "spectrum_peak": 0.992872,
+        "ks_stat": 0.544813
+      }
+    },
+    "60": {
+      "keyId": 60,
+      "d": "2c9a133c044979e9bb8fa950a43544d96055d59060b3bffbaa9c8733882d6650",
+      "diagnosis": "weak_seed",
+      "confidence": 0.95,
+      "nNonces": 4,
+      "msbBitMeans": [
+        0.5,
+        0.5,
+        0.5,
+        0.25,
+        0.5,
+        1.0,
+        0.75,
+        0.5,
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.75,
+        0.75,
+        0.5,
+        0.75,
+        1.0,
+        0.5,
+        0.25,
+        0.5,
+        0.5,
+        1.0,
+        0.25,
+        0.5,
+        0.25,
+        1.0,
+        0.5,
+        0.5,
+        0.25,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "deadMsbBits": 0,
+      "spectrum": [
+        0.097511,
+        0.890116,
+        0.283257,
+        0.618886,
+        0.436393,
+        0.411059,
+        0.52596,
+        0.534717,
+        0.522916,
+        0.696462,
+        0.415575,
+        0.676974,
+        0.221326,
+        0.454109,
+        0.050551,
+        0.101582,
+        0.253429,
+        0.259017,
+        0.406614,
+        0.500299,
+        0.459724,
+        0.541136,
+        0.420306,
+        0.384549,
+        0.335803,
+        0.253933,
+        0.265954,
+        0.521084,
+        0.213739,
+        0.812834,
+        0.122089,
+        0.934749,
+        0.080967,
+        0.841823,
+        0.291488,
+        0.601715,
+        0.501241,
+        0.460019,
+        0.626375,
+        0.623985,
+        0.613822,
+        0.802923,
+        0.45844,
+        0.80498,
+        0.244505,
+        0.605299,
+        0.298894,
+        0.273422,
+        0.525279,
+        0.12395,
+        0.651674,
+        0.362888,
+        0.614601,
+        0.431032,
+        0.42689,
+        0.292584,
+        0.156414,
+        0.029295,
+        0.115187,
+        0.356848,
+        0.273472,
+        0.638245,
+        0.280197,
+        0.754905
+      ],
+      "nonceSamples": [
+        "c5c2fcf7a12aac7043447ae7ab00937b548c99e13dfd405fb9e2907cf534a8a3",
+        "2e4f8d5084f4b596a6dcfe46c538fc32aa548702914ad581814877135f19b695",
+        "bf0d974fae15c216d754b73cdb8fc8c84083ca4b066b23d814987e9bd1e3401d",
+        "468dc4675cf2dcf1abc5fd700a74e8b56aed46545cd9ebc3645b070bb2ff803c"
+      ],
+      "evidence": {
+        "n_nonces": 4,
+        "min_leading_zero_bits": 0,
+        "bias_magnitude": 0.097511,
+        "range_ratio": 0.772507,
+        "distinct_ratio": 1.0,
+        "collision_pairs": 0,
+        "lag1_autocorr": -0.99307,
+        "spectrum_peak": 0.934749,
+        "ks_stat": 0.246301
+      }
+    }
+  },
+  "attributions": [
+    {
+      "keyId": 40,
+      "diagnosis": "truncated_msb",
+      "source": "cracked",
+      "confidence": 0.95,
+      "truth": "truncated_msb",
+      "correct": true
+    },
+    {
+      "keyId": 46,
+      "diagnosis": "modular_reduction",
+      "source": "cracked",
+      "confidence": 0.95,
+      "truth": "modular_reduction",
+      "correct": true
+    },
+    {
+      "keyId": 52,
+      "diagnosis": "short_period_prng",
+      "source": "cracked",
+      "confidence": 0.9,
+      "truth": "short_period_prng",
+      "correct": true
+    },
+    {
+      "keyId": 53,
+      "diagnosis": "short_period_prng",
+      "source": "propagated",
+      "confidence": 0.72,
+      "truth": "short_period_prng",
+      "correct": true
+    },
+    {
+      "keyId": 54,
+      "diagnosis": "short_period_prng",
+      "source": "propagated",
+      "confidence": 0.72,
+      "truth": "short_period_prng",
+      "correct": true
+    },
+    {
+      "keyId": 55,
+      "diagnosis": "short_period_prng",
+      "source": "propagated",
+      "confidence": 0.72,
+      "truth": "short_period_prng",
+      "correct": true
+    },
+    {
+      "keyId": 56,
+      "diagnosis": "short_period_prng",
+      "source": "propagated",
+      "confidence": 0.72,
+      "truth": "short_period_prng",
+      "correct": true
+    },
+    {
+      "keyId": 57,
+      "diagnosis": "short_period_prng",
+      "source": "propagated",
+      "confidence": 0.72,
+      "truth": "short_period_prng",
+      "correct": true
+    },
+    {
+      "keyId": 58,
+      "diagnosis": "weak_seed",
+      "source": "cracked",
+      "confidence": 0.95,
+      "truth": "weak_seed",
+      "correct": true
+    },
+    {
+      "keyId": 59,
+      "diagnosis": "weak_seed",
+      "source": "cracked",
+      "confidence": 0.95,
+      "truth": "weak_seed",
+      "correct": true
+    },
+    {
+      "keyId": 60,
+      "diagnosis": "weak_seed",
+      "source": "cracked",
+      "confidence": 0.95,
+      "truth": "weak_seed",
+      "correct": true
+    },
+    {
+      "keyId": 61,
+      "diagnosis": "weak_seed",
+      "source": "propagated",
+      "confidence": 0.76,
+      "truth": "weak_seed",
+      "correct": true
+    },
+    {
+      "keyId": 62,
+      "diagnosis": "weak_seed",
+      "source": "propagated",
+      "confidence": 0.76,
+      "truth": "weak_seed",
+      "correct": true
+    },
+    {
+      "keyId": 63,
+      "diagnosis": "weak_seed",
+      "source": "propagated",
+      "confidence": 0.76,
+      "truth": "weak_seed",
+      "correct": true
+    }
+  ],
+  "cohortGraph": {
+    "nodes": [
+      {
+        "id": 40,
+        "label": "truncated_msb",
+        "source": "cracked",
+        "confidence": 0.95,
+        "correct": true,
+        "x": 0.469,
+        "y": 0.86,
+        "cohort": null
+      },
+      {
+        "id": 46,
+        "label": "modular_reduction",
+        "source": "cracked",
+        "confidence": 0.95,
+        "correct": true,
+        "x": 0.531,
+        "y": 0.86,
+        "cohort": null
+      },
+      {
+        "id": 52,
+        "label": "short_period_prng",
+        "source": "cracked",
+        "confidence": 0.9,
+        "correct": true,
+        "x": 0.231638,
+        "y": 0.164,
+        "cohort": 0
+      },
+      {
+        "id": 53,
+        "label": "short_period_prng",
+        "source": "propagated",
+        "confidence": 0.72,
+        "correct": true,
+        "x": 0.295833,
+        "y": 0.252,
+        "cohort": 0
+      },
+      {
+        "id": 54,
+        "label": "short_period_prng",
+        "source": "propagated",
+        "confidence": 0.72,
+        "correct": true,
+        "x": 0.295833,
+        "y": 0.428,
+        "cohort": 0
+      },
+      {
+        "id": 55,
+        "label": "short_period_prng",
+        "source": "propagated",
+        "confidence": 0.72,
+        "correct": true,
+        "x": 0.231638,
+        "y": 0.516,
+        "cohort": 0
+      },
+      {
+        "id": 56,
+        "label": "short_period_prng",
+        "source": "propagated",
+        "confidence": 0.72,
+        "correct": true,
+        "x": 0.167443,
+        "y": 0.428,
+        "cohort": 0
+      },
+      {
+        "id": 57,
+        "label": "short_period_prng",
+        "source": "propagated",
+        "confidence": 0.72,
+        "correct": true,
+        "x": 0.167443,
+        "y": 0.252,
+        "cohort": 0
+      },
+      {
+        "id": 58,
+        "label": "weak_seed",
+        "source": "cracked",
+        "confidence": 0.95,
+        "correct": true,
+        "x": 0.484672,
+        "y": 0.248,
+        "cohort": 1
+      },
+      {
+        "id": 59,
+        "label": "weak_seed",
+        "source": "cracked",
+        "confidence": 0.95,
+        "correct": true,
+        "x": 0.66358,
+        "y": 0.248,
+        "cohort": 2
+      },
+      {
+        "id": 60,
+        "label": "weak_seed",
+        "source": "cracked",
+        "confidence": 0.95,
+        "correct": true,
+        "x": 0.842488,
+        "y": 0.248,
+        "cohort": 3
+      },
+      {
+        "id": 61,
+        "label": "weak_seed",
+        "source": "propagated",
+        "confidence": 0.76,
+        "correct": true,
+        "x": 0.484672,
+        "y": 0.432,
+        "cohort": 1
+      },
+      {
+        "id": 62,
+        "label": "weak_seed",
+        "source": "propagated",
+        "confidence": 0.76,
+        "correct": true,
+        "x": 0.66358,
+        "y": 0.432,
+        "cohort": 2
+      },
+      {
+        "id": 63,
+        "label": "weak_seed",
+        "source": "propagated",
+        "confidence": 0.76,
+        "correct": true,
+        "x": 0.842488,
+        "y": 0.432,
+        "cohort": 3
+      }
+    ],
+    "edges": [
+      {
+        "source": 52,
+        "target": 53
+      },
+      {
+        "source": 53,
+        "target": 54
+      },
+      {
+        "source": 54,
+        "target": 56
+      },
+      {
+        "source": 54,
+        "target": 55
+      },
+      {
+        "source": 55,
+        "target": 56
+      },
+      {
+        "source": 56,
+        "target": 57
+      },
+      {
+        "source": 58,
+        "target": 61
+      },
+      {
+        "source": 59,
+        "target": 62
+      },
+      {
+        "source": 60,
+        "target": 63
+      }
+    ],
+    "clusters": [
+      {
+        "cohort": 0,
+        "x": 0.231638,
+        "y": 0.34,
+        "r": 0.176,
+        "size": 6,
+        "members": [
+          52,
+          53,
+          54,
+          55,
+          56,
+          57
+        ],
+        "label": "short_period_prng"
+      },
+      {
+        "cohort": 1,
+        "x": 0.484672,
+        "y": 0.34,
+        "r": 0.092,
+        "size": 2,
+        "members": [
+          58,
+          61
+        ],
+        "label": "weak_seed"
+      },
+      {
+        "cohort": 2,
+        "x": 0.66358,
+        "y": 0.34,
+        "r": 0.092,
+        "size": 2,
+        "members": [
+          59,
+          62
+        ],
+        "label": "weak_seed"
+      },
+      {
+        "cohort": 3,
+        "x": 0.842488,
+        "y": 0.34,
+        "r": 0.092,
+        "size": 2,
+        "members": [
+          60,
+          63
+        ],
+        "label": "weak_seed"
+      }
+    ],
+    "singletons": [
+      40,
+      46
+    ],
+    "bandDividerY": 0.63
+  },
+  "propagation": [
+    {
+      "cohort": 0,
+      "root": 52,
+      "label": "short_period_prng",
+      "members": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "steps": [
+        {
+          "step": 0,
+          "from": 52,
+          "to": 53
+        },
+        {
+          "step": 1,
+          "from": 53,
+          "to": 54
+        },
+        {
+          "step": 2,
+          "from": 54,
+          "to": 55
+        },
+        {
+          "step": 3,
+          "from": 54,
+          "to": 56
+        },
+        {
+          "step": 4,
+          "from": 56,
+          "to": 57
+        }
+      ]
+    },
+    {
+      "cohort": 1,
+      "root": 58,
+      "label": "weak_seed",
+      "members": [
+        58,
+        61
+      ],
+      "steps": [
+        {
+          "step": 0,
+          "from": 58,
+          "to": 61
+        }
+      ]
+    },
+    {
+      "cohort": 2,
+      "root": 59,
+      "label": "weak_seed",
+      "members": [
+        59,
+        62
+      ],
+      "steps": [
+        {
+          "step": 0,
+          "from": 59,
+          "to": 62
+        }
+      ]
+    },
+    {
+      "cohort": 3,
+      "root": 60,
+      "label": "weak_seed",
+      "members": [
+        60,
+        63
+      ],
+      "steps": [
+        {
+          "step": 0,
+          "from": 60,
+          "to": 63
+        }
+      ]
+    }
+  ],
+  "section": [
+    {
+      "keyId": 0,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 1,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 2,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 3,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 4,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 5,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 6,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 7,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 8,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 9,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 10,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 11,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 12,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 13,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 14,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 15,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 16,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 17,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 18,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 19,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 20,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 21,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 22,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 23,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 24,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 25,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 26,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 27,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 28,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 29,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 30,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 31,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 32,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 33,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 34,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 35,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 36,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 37,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 38,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 39,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 40,
+      "nSignatures": 70,
+      "label": "truncated_msb",
+      "source": "cracked",
+      "cracked": true
+    },
+    {
+      "keyId": 41,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 42,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 43,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 44,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 45,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 46,
+      "nSignatures": 90,
+      "label": "modular_reduction",
+      "source": "cracked",
+      "cracked": true
+    },
+    {
+      "keyId": 47,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 48,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 49,
+      "nSignatures": 2,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 50,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 51,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 52,
+      "nSignatures": 12,
+      "label": "short_period_prng",
+      "source": "cracked",
+      "cracked": true
+    },
+    {
+      "keyId": 53,
+      "nSignatures": 12,
+      "label": "short_period_prng",
+      "source": "propagated",
+      "cracked": false
+    },
+    {
+      "keyId": 54,
+      "nSignatures": 4,
+      "label": "short_period_prng",
+      "source": "propagated",
+      "cracked": false
+    },
+    {
+      "keyId": 55,
+      "nSignatures": 3,
+      "label": "short_period_prng",
+      "source": "propagated",
+      "cracked": false
+    },
+    {
+      "keyId": 56,
+      "nSignatures": 4,
+      "label": "short_period_prng",
+      "source": "propagated",
+      "cracked": false
+    },
+    {
+      "keyId": 57,
+      "nSignatures": 3,
+      "label": "short_period_prng",
+      "source": "propagated",
+      "cracked": false
+    },
+    {
+      "keyId": 58,
+      "nSignatures": 8,
+      "label": "weak_seed",
+      "source": "cracked",
+      "cracked": true
+    },
+    {
+      "keyId": 59,
+      "nSignatures": 3,
+      "label": "weak_seed",
+      "source": "cracked",
+      "cracked": true
+    },
+    {
+      "keyId": 60,
+      "nSignatures": 4,
+      "label": "weak_seed",
+      "source": "cracked",
+      "cracked": true
+    },
+    {
+      "keyId": 61,
+      "nSignatures": 2,
+      "label": "weak_seed",
+      "source": "propagated",
+      "cracked": false
+    },
+    {
+      "keyId": 62,
+      "nSignatures": 4,
+      "label": "weak_seed",
+      "source": "propagated",
+      "cracked": false
+    },
+    {
+      "keyId": 63,
+      "nSignatures": 4,
+      "label": "weak_seed",
+      "source": "propagated",
+      "cracked": false
+    },
+    {
+      "keyId": 64,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 65,
+      "nSignatures": 3,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 66,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 67,
+      "nSignatures": 5,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 68,
+      "nSignatures": 4,
+      "label": null,
+      "source": null,
+      "cracked": false
+    },
+    {
+      "keyId": 69,
+      "nSignatures": 6,
+      "label": null,
+      "source": null,
+      "cracked": false
+    }
+  ],
+  "chain": {
+    "nCracked": 14,
+    "nDiagnosed": 7,
+    "nAttributed": 14,
+    "diagnosisAccuracy": 1.0,
+    "attributionAccuracy": 1.0,
+    "nUndiagnosable": 7,
+    "unwalkedEdges": 15,
+    "hops": [
+      {
+        "keyId": 53,
+        "viaKeyId": 52,
+        "r": "2403812fdf8e92084ad0ea7a9df7bd0fda12b5e84fe9f3b645c935d317aa1336",
+        "depth": 1,
+        "truth": "short_period_prng",
+        "selfDiagnosable": true
+      },
+      {
+        "keyId": 54,
+        "viaKeyId": 52,
+        "r": "2403812fdf8e92084ad0ea7a9df7bd0fda12b5e84fe9f3b645c935d317aa1336",
+        "depth": 1,
+        "truth": "short_period_prng",
+        "selfDiagnosable": false
+      },
+      {
+        "keyId": 55,
+        "viaKeyId": 52,
+        "r": "2403812fdf8e92084ad0ea7a9df7bd0fda12b5e84fe9f3b645c935d317aa1336",
+        "depth": 1,
+        "truth": "short_period_prng",
+        "selfDiagnosable": false
+      },
+      {
+        "keyId": 56,
+        "viaKeyId": 52,
+        "r": "2403812fdf8e92084ad0ea7a9df7bd0fda12b5e84fe9f3b645c935d317aa1336",
+        "depth": 1,
+        "truth": "short_period_prng",
+        "selfDiagnosable": false
+      },
+      {
+        "keyId": 57,
+        "viaKeyId": 52,
+        "r": "2403812fdf8e92084ad0ea7a9df7bd0fda12b5e84fe9f3b645c935d317aa1336",
+        "depth": 1,
+        "truth": "short_period_prng",
+        "selfDiagnosable": false
+      },
+      {
+        "keyId": 61,
+        "viaKeyId": 58,
+        "r": "f819ec983ecc519e4a898f430d69a52efd323318220de8953f9c37cb2fe43251",
+        "depth": 1,
+        "truth": "weak_seed",
+        "selfDiagnosable": false
+      },
+      {
+        "keyId": 62,
+        "viaKeyId": 59,
+        "r": "0b940fb2951d36ad65bea57a97b1e2508d8d73a51b0e36a62ccaad397fdf9e35",
+        "depth": 1,
+        "truth": "weak_seed",
+        "selfDiagnosable": false
+      },
+      {
+        "keyId": 63,
+        "viaKeyId": 60,
+        "r": "3444718a52a26c2d5839d70fed4537648f06cae915c97b850846778556d1acd9",
+        "depth": 1,
+        "truth": "weak_seed",
+        "selfDiagnosable": false
+      }
+    ]
+  }
+}
