@@ -42,12 +42,13 @@ jobs:
       # Before the build, not after: the build reads this step's base_path, and a
       # project page is served from /<repo> rather than the domain root. Without
       # it every /_next/ URL would 404 in production while working on localhost.
+      # Pages itself is already enabled on the repository, in workflow build mode.
+      # This step does not try to create it: GITHUB_TOKEN cannot create a Pages
+      # site while the repository's default workflow permission is read-only, and
+      # `enablement: true` fails the run with "Resource not accessible by
+      # integration". All this step does now is report the base path.
       - uses: actions/configure-pages@v5
         id: pages
-        with:
-          # Turn Pages on for the repository from here, so the first run of this
-          # workflow publishes the site instead of failing on a setting.
-          enablement: true
 
       - run: npm ci
 
