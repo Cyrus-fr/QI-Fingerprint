@@ -434,8 +434,10 @@ reading arriving.
 - Section order may still be re-cut; nothing may be lost. The order shipped in `RunPage`
   (collar, seam, method, triage, cohort, cascade, assay, assays, lost core, prior surveys,
   title block) is the current build, not a pinned rule.
-- Deploy target is settled: GitHub Pages at https://cyrus-fr.github.io/QI-Fingerprint/,
-  built in CI by `.github/workflows/pages.yml`. The export is not committed. Because a
-  project page serves from `/<repo>` rather than the domain root, `next.config.mjs`
-  reads `PAGES_BASE_PATH`, which CI sets from the repository name; local builds and
-  `next dev` leave it empty and stay at the root.
+- Deploy target is settled: Vercel, at https://qi-fingerprint.vercel.app, deployed by
+  Vercel's Git integration on every push to `main`. The repository is private; Vercel's
+  Hobby plan deploys private repositories owned by a personal account. The project's
+  Root Directory is `site` and its framework preset is Next.js. Both must be set on the
+  project itself: built from the repository root, Vercel finds `pyproject.toml` first
+  and tries to deploy the pipeline as a Python app. The site serves from the domain
+  root, so the export needs no base path. The export is not committed.
