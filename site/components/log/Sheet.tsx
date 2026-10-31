@@ -157,8 +157,11 @@ export function Interval({
  * `.cmd` wraps rather than scrolls, and left to itself a wrap splits "--chain"
  * after its dashes, which reads as two arguments. Each argument is set as an
  * atomic inline box, so lines break at spaces; an argument longer than the whole
- * column still breaks inside itself rather than running off the sheet. The spaces
- * stay real text, so a selection copies the command unchanged.
+ * column still breaks inside itself rather than running off the sheet. It breaks
+ * after a slash first (`<wbr>`), so a path reads `tools/` + `audit_stage3.py`
+ * rather than `audit_stage3.` + `py`; `overflow-wrap: anywhere` only takes over
+ * when a single segment is wider than the column. The spaces stay real text and
+ * `<wbr>` adds none, so a selection copies the command unchanged.
  */
 export function CommandText({ command }: { command: string }) {
   return command.split(/( +)/).map((part, i) =>
@@ -168,7 +171,9 @@ export function CommandText({ command }: { command: string }) {
       // `indent-0`: text-indent inherits, and the hanging indent belongs to the
       // line, not to every argument on it.
       <span key={i} className="inline-block max-w-full indent-0">
-        {part}
+        {part.split("/").flatMap((seg, j, segs) =>
+          j < segs.length - 1 ? [`${seg}/`, <wbr key={j} />] : [seg],
+        )}
       </span>
     ),
   );
