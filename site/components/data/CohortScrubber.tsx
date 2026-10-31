@@ -29,22 +29,22 @@ const PHASES = [
   {
     at: 0,
     kicker: "population",
-    line: "An unlabeled population. No private keys, no vendor metadata, no ground truth — only public signatures.",
+    line: "An unlabeled population of public signatures, with no private keys, vendor metadata or ground truth.",
   },
   {
     at: 0.18,
     kicker: "crack",
-    line: "The cheapest certain recovery fires first. Each cracked key passes d·G == Q before the pipeline will even look at it.",
+    line: "The cheapest certain recovery fires first. Each cracked key must pass d·G == Q before the pipeline uses it.",
   },
   {
     at: 0.32,
     kicker: "propagate",
-    line: "Cohort membership comes purely from shared r values. The diagnosis carries along those links to keys that were never cracked.",
+    line: "Cohort membership comes only from shared r values. The diagnosis carries along those links to keys that were never cracked.",
   },
   {
     at: 0.8,
     kicker: "attributed",
-    line: "One diagnosis per cohort, spread across the population — and the keys with no observable link are left grey rather than guessed.",
+    line: "One diagnosis per cohort spreads across the population. Keys with no observable link are left grey.",
   },
 ];
 

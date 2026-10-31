@@ -205,7 +205,7 @@ export function Assays() {
     <Interval
       id="evidence"
       depth="assays"
-      title="What the audits actually found"
+      title="What the audits found"
       standfirst={`${EVIDENCE.length} adversarial self-audits run against this pipeline to find where it works and where it does not. Negative results are logged as negative results, and every assay carries the command that reproduces it.`}
     >
       {/* Assays are results, so they are logged on stock, in a ruled run. A grid
@@ -384,8 +384,8 @@ export function TitleBlock({ seed, curve }: { seed: number; curve: string }) {
         <div className="md:col-span-3">
           <div className="text-[1.15rem] font-700 tracking-[-0.02em] text-ink">QI-Fingerprint</div>
           <p className="mt-3 max-w-[34ch] text-[0.8rem] leading-relaxed text-ink-2">
-            Labels synthetic, recovery real. Validated against a reused-nonce key from block
-            252,474.
+            The diagnosis labels come from synthetic data. Recovery is validated against a
+            real reused-nonce key from block 252,474.
           </p>
           <p className="mt-4 max-w-[34ch] text-[0.78rem] leading-relaxed text-ink-3">
             A key recovered from real chain data is never printed, logged or written to
@@ -473,8 +473,8 @@ export function Assay() {
           data-reading="260"
           className="reading-settle mt-10 max-w-[74ch] text-[0.88rem] leading-relaxed text-ink-3"
         >
-          Pinned offline as a regression fixture and recovered on every test run, so the
-          claim is checked rather than remembered. The six scalars shown in the
+          The key is pinned offline as a regression fixture, and every test run recovers
+          it again. The six scalars shown in the
           recovered-core interval are a different matter: those keys belong to a corpus
           this project generated, and are its own to show.
         </p>

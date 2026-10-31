@@ -68,7 +68,7 @@ export function TriageSection({ run }: { run: RunData }) {
       id="triage"
       depth="recovered core"
       title="Live triage"
-      standfirst={`A frozen run of the real pipeline on an unlabeled ${stats.nKeys}-key / ${stats.nSignatures}-signature corpus, seed ${run.seed}. Every number below was written by tools/export_site_data.py — none of it is illustrative.`}
+      standfirst={`A frozen run of the real pipeline on an unlabeled ${stats.nKeys}-key / ${stats.nSignatures}-signature corpus, seed ${run.seed}. Every number below was written by tools/export_site_data.py, and none of it is illustrative.`}
     >
       {/* ---------------------------------------------------------------- stats */}
       <div className="border-t border-rule">
@@ -121,7 +121,7 @@ export function TriageSection({ run }: { run: RunData }) {
       <p className="mb-8 max-w-3xl text-sm leading-relaxed text-ink-2">
         Every row passed the <span className="reading text-ink">d·G == Q</span> gate inside{" "}
         <span className="reading">crack_key</span>; the pipeline discards anything that
-        doesn&apos;t, so a listed key is a proven recovery rather than a guess. The{" "}
+        doesn&apos;t, so every listed key is a verified recovery. The{" "}
         <span className="reading">truth</span> column is ground truth the pipeline never read.
       </p>
 
@@ -180,7 +180,7 @@ export function TriageSection({ run }: { run: RunData }) {
       <p className="mb-10 max-w-3xl text-sm leading-relaxed text-ink-2">
         With <span className="reading text-ink">d</span> recovered, every nonce is{" "}
         <span className="reading text-ink">k_i = (h_i + r_i·d)·s_i⁻¹ mod n</span>. The shape of
-        that reconstructed population is the whole diagnosis — and the four classes below look
+        that reconstructed population is the whole diagnosis, and the four classes below look
         nothing like each other.
       </p>
 
@@ -209,8 +209,8 @@ export function TriageSection({ run }: { run: RunData }) {
               <div className="mb-8 border border-rule bg-ground-raised p-4">
                 <div className="reading mb-2 text-[0.65rem] tracking-[0.2em] text-ink-3">
                   {detail.d
-                    ? "recovered private key d — verified d·G == Q"
-                    : "recovered — verified d·G == Q, key withheld"}
+                    ? "recovered private key d, verified d·G == Q"
+                    : "recovered and verified d·G == Q, key withheld"}
                 </div>
                 {detail.d ? (
                   <div className="hexline text-[0.8rem] text-field md:text-sm">

@@ -30,7 +30,7 @@ const DERIVATION = [
   {
     step: "solve for the nonce",
     tex: "k = sₐ⁻¹ (hₐ + r·dₐ)",
-    note: "exact, not up to sign — it comes out of A's own equation",
+    note: "exact, not up to sign: it comes out of A's own equation",
   },
   {
     step: "solve for the neighbour",
@@ -89,7 +89,7 @@ export function CascadeSection({ run }: { run: RunData }) {
       id="cascade"
       depth="cascade"
       title="What one recovered key is worth"
-      standfirst="Two different keys sharing a nonce is two equations in three unknowns. Unsolvable on its own — and solvable the instant either end is known. Walking those edges takes the same corpus from six recovered keys to fourteen, with every hop gated on d·G == Q."
+      standfirst="Two keys that share a nonce give two equations in three unknowns, which cannot be solved until one of the keys is known. Walking those edges takes the same corpus from six recovered keys to fourteen, with every hop gated on d·G == Q."
     >
       {/* -------------------------------------------------- the derivation */}
       <ol
@@ -118,7 +118,7 @@ export function CascadeSection({ run }: { run: RunData }) {
 
       <p className="reading mt-5 border-t border-weak_seed pt-4 text-sm leading-relaxed text-ink-2">
         Both signs of k&prime; must be tried. BIP146 may have normalised one signature and not
-        the other, and across two keys that is a coin flip &mdash; trying only +k recovers
+        the other, and across two keys that is a coin flip. Trying only +k recovers
         nothing and looks exactly like an empty range.
       </p>
 
@@ -134,7 +134,7 @@ export function CascadeSection({ run }: { run: RunData }) {
             />
             <Figure
               value={chain.nUndiagnosable}
-              label="recovered but carrying too few nonces to diagnose — labelled from their cohort, not guessed"
+              label="recovered but carrying too few nonces to diagnose, so labelled from their cohort"
               tone="warn"
             />
             <Figure

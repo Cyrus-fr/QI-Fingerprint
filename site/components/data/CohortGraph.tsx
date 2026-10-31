@@ -73,7 +73,7 @@ interface Plan {
 const cohortCaption = (size: number, label: string | null | undefined) =>
   `${size} KEYS · ${(label ?? "").toUpperCase()}`;
 
-const SINGLETON_CAPTION = "NO SHARED r — CRACKED ALONE, NOTHING TO PROPAGATE TO";
+const SINGLETON_CAPTION = "NO SHARED r, CRACKED ALONE, NOTHING TO PROPAGATE TO";
 
 /** The wide composition: the export script's own coordinates, as logged. */
 function widePlan(run: RunData): Plan {
@@ -200,7 +200,7 @@ function compactPlan(run: RunData): Plan {
     // Set on two lines: there is no room for the sentence across 320 units, and
     // shrinking it to fit would put it back at the size this composition exists
     // to escape.
-    captions.push({ key: "s1", x: LEFT, y, anchor: "start", text: "NO SHARED r — CRACKED ALONE," });
+    captions.push({ key: "s1", x: LEFT, y, anchor: "start", text: "NO SHARED r, CRACKED ALONE," });
     captions.push({ key: "s2", x: LEFT, y: y + 14, anchor: "start", text: "NOTHING TO PROPAGATE TO" });
     y += 14 + 10;
   }

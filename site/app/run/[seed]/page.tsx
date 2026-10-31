@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { seed } = await params;
   return {
-    title: `QI-Fingerprint — seed ${seed}`,
+    title: `QI-Fingerprint: seed ${seed}`,
     description: `ECDSA nonce-bias triage on a synthetic corpus, seed ${seed}. Validated on synthetic corpora only.`,
   };
 }

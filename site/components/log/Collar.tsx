@@ -263,9 +263,9 @@ export function Collar({ run }: { run: RunData }) {
 
             <figcaption className="mt-5 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 border-t border-rule pt-3">
               <span className="max-w-[38ch] text-[0.78rem] leading-snug text-ink-2">
-                The left run is 35 keys carrying two to five signatures each
-                &mdash; uncrackable alone, and the reason the unit of analysis
-                is the population.
+                The left run is 35 keys carrying two to five signatures each.
+                None can be cracked alone, which is why the unit of analysis is
+                the population.
                 <span className="reading mt-1 block text-[0.68rem] text-ink-3">
                   bar width = signatures, 2 to {geo.maxSigs}
                 </span>
@@ -311,8 +311,8 @@ export function Collar({ run }: { run: RunData }) {
               Four stages over an unlabeled corpus of ECDSA signatures,
               answering which nonce-generation bug is leaking private keys and
               which other keys share it. Every recovery is gated on{" "}
-              <span className="reading text-ink">d&middot;G == Q</span>, so a
-              listed crack is a proof rather than a guess.
+              <span className="reading text-ink">d&middot;G == Q</span>, so each
+              listed crack has been checked against its public key.
             </p>
 
             {/* The survey title block. A drawing carries its identity in a ruled
@@ -324,7 +324,7 @@ export function Collar({ run }: { run: RunData }) {
               {(
                 [
                   ["finding", "one recovered key diagnoses the population"],
-                  ["sheet", "QI-Fingerprint — cored section"],
+                  ["sheet", "QI-Fingerprint · cored section"],
                   [
                     "subject",
                     `unlabeled ECDSA corpus, seed ${run.seed}, ${run.curve}`,

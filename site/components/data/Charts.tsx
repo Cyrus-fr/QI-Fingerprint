@@ -81,14 +81,14 @@ export function MsbHistogram({ detail }: { detail: KeyDetail }) {
   return (
     <figure className="min-w-0">
       <figcaption className="reading mb-3 text-[0.7rem] leading-relaxed text-ink-2">
-        MSB bit histogram — P(bit = 1) across the top 32 bits.{" "}
+        MSB bit histogram: P(bit = 1) across the top 32 bits.{" "}
         {detail.deadMsbBits > 0 ? (
           <span className="text-field">
             {detail.deadMsbBits} dead top bits: every reconstructed nonce is zero there.
           </span>
         ) : (
           <span className="text-ink-2">
-            No dead top bits — this key&apos;s nonces are full-range.
+            No dead top bits: this key&apos;s nonces are full-range.
           </span>
         )}
       </figcaption>
@@ -182,11 +182,11 @@ export function SpectrumChart({ detail }: { detail: KeyDetail }) {
   return (
     <figure className="min-w-0">
       <figcaption className="reading mb-3 text-[0.7rem] leading-relaxed text-ink-2">
-        Bleichenbacher spectrum — bias magnitude at w = 1..64. Peak{" "}
+        Bleichenbacher spectrum: bias magnitude at w = 1..64. Peak{" "}
         <span className="text-field">{peak.toFixed(3)}</span>
         {peak > 0.9
-          ? " — a saturated peak is gross MSB bias."
-          : " — a low, flat scan is a full-range generator."}
+          ? ". A saturated peak means gross MSB bias."
+          : ". A low, flat scan means a full-range generator."}
       </figcaption>
       <svg
         viewBox={`0 0 ${W} ${H}`}

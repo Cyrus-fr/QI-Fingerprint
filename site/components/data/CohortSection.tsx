@@ -17,7 +17,7 @@ export function CohortSection({ run }: { run: RunData }) {
       id="cohort"
       depth="correlation"
       title="One crack colours the cohort"
-      standfirst="Cohort membership comes purely from shared r values — no ground truth, no metadata. Crack one member, fingerprint it, and the diagnosis carries to every key linked to it. The keys with no observable link stay grey, because guessing them would be the one thing this pipeline refuses to do."
+      standfirst="Cohort membership comes only from shared r values, with no ground truth and no metadata. Crack one member, fingerprint it, and the diagnosis carries to every key linked to it. Keys with no observable link stay grey; the pipeline does not guess at them."
     >
       <CohortScrubber run={run}>
         {/* Summary and table sit side by side only from `xl`. The table's cells are
@@ -33,7 +33,7 @@ export function CohortSection({ run }: { run: RunData }) {
             </h3>
             <p className="mb-6 text-sm leading-relaxed text-ink-2">
               {propagated.length} of these keys were never cracked. Their diagnosis is
-              inherited from a cohort-mate that was, and it is correct for every one of them —
+              inherited from a cohort-mate that was, and it is correct for every one of them,
               scored against ground truth the pipeline never loaded.
             </p>
             <dl className="space-y-4 border-t border-rule pt-6">
@@ -59,7 +59,7 @@ export function CohortSection({ run }: { run: RunData }) {
             <div>
               <table className="stack-table w-full border-collapse text-left">
                 <caption className="reading mb-3 text-left text-[0.65rem] tracking-[0.16em] text-ink-3">
-                  attribution — every key the pipeline labelled
+                  attribution: every key the pipeline labelled
                 </caption>
                 <thead>
                   <tr className="border-y border-rule-strong">

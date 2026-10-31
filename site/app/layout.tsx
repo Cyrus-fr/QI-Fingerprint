@@ -35,7 +35,7 @@ const splineMono = Spline_Sans_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "QI-Fingerprint — a cored section through an ECDSA signature corpus",
+  title: "QI-Fingerprint: a cored section through an ECDSA signature corpus",
   description:
     "Which nonce-generation bug is leaking private keys, and which other keys share it. Four stages over unlabeled ECDSA signatures, every recovery gated on d·G == Q. Classification measured on synthetic corpora; recovery validated against a real reused-nonce key from block 252,474.",
 };
